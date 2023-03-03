@@ -41,6 +41,11 @@
   color: var(--title-color-dark);
 }
 
+/* Change Backgroud*/
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
 /* For medium devices */
 @media screen and (max-width: 768px) {
   .header {
@@ -85,7 +90,7 @@
     color: var(--title-color-dark);
   }
 
-  .nav__toggle{
+  .nav__toggle {
     font-size: 1.1rem;
     cursor: pointer;
   }
@@ -102,7 +107,7 @@
     padding: 2rem 0.25rem 4rem;
   }
 
-  .nav__list{
+  .nav__list {
     column-gap: 0;
   }
 }
