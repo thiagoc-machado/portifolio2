@@ -31,11 +31,11 @@ const Contact = () => {
 
               <h3 className='contact__card-title'>Email</h3>
               <span className='contact__card-data'>
-                thiagocmachado@yahoo.com.br
+                thiagocmach@gmail.com
               </span>
 
               <a
-                href='mailto:thiagocmachado@yahoo.com.br'
+                href='mailto:thiagocmach@gmail.com'
                 className='contact__button'
               >
                 Write me{''}
@@ -43,13 +43,13 @@ const Contact = () => {
               </a>
             </div>
             <div className='contact__card'>
-              <i className='bx bxl-whatsapp contact__card-icon'></i>
+              <i className='bx bxl-linkedin contact__card-icon'></i>
 
-              <h3 className='contact__card-title'>Whatsapp</h3>
-              <span className='contact__card-data'>123456789</span>
+              <h3 className='contact__card-title'>Linkedin</h3>
+              <span className='contact__card-data'></span>
 
               <a
-                href='api.whatsapp.com/send?phone=123456789&text=Hello, more information!'
+                href='https://www.linkedin.com/in/thiagomach/'
                 className='contact__button'
               >
                 Write me{''}
@@ -58,12 +58,12 @@ const Contact = () => {
             </div>
 
             <div className='contact__card'>
-              <i className='bx bxl-messenger contact__card-icon'></i>
+              <i className='bx bxl-instagram contact__card-icon'></i>
 
-              <h3 className='contact__card-title'>Messenger</h3>
+              <h3 className='contact__card-title'>Instagram</h3>
               <span className='contact__card-data'>Thiago</span>
 
-              <a href='www.facebook.com' className='contact__button'>
+              <a href='https://www.instagram.com/thiagoc.machado/' className='contact__button'>
                 Write me{''}
                 <i className='bx bx-right-arrow-alt contact__button-icon'></i>
               </a>
