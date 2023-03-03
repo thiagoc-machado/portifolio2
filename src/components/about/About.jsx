@@ -14,10 +14,12 @@ function About() {
         <div className='about__data'>
           <Info />
           <p className='about__description'>
-            I am a Full Stack developer with experience in data manipulation,
-            web scraping, Flask, and Django. I am constantly seeking to improve
-            my skills and stay current with industry developments. I am highly
-            motivated and passionate about technology.
+            As a fullstack developer, I'm passionate about creating innovative
+            solutions that bring ideas to life. From frontend design to backend
+            development, I bring a comprehensive approach to every project I
+            work on. With a focus on clean and efficient code, I'm dedicated to
+            delivering digital experiences that are not only functional but also
+            beautiful and intuitive.
           </p>
           <a download='' href={CV} className='button button-flex'>
             Download CV

@@ -57,7 +57,7 @@ const Data = () => {
       </h1>
       <h3 className='home__subtitle'>FullStack Developer</h3>
       <p className='home__description'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Building beautiful and functional digital experiences one line of code at a time
       </p>
       <a href='#contact' className='button button--flex'>
         Say Hello
