@@ -27,7 +27,6 @@
   color: var(--title-color);
   margin-bottom: var(--mb-0-25);
 }
-
 .contact__card-title,
 .contact__card-data {
   font-size: var(--small-font-size);
