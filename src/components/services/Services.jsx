@@ -325,9 +325,9 @@ const Services = () => {
           <div onClick={() => toggleTab(6)}>
             <i className='uil uil-web-grid services__icon'></i>
             <h3 className='services__title'>
-              Product
+              React
               <br />
-              Designer
+              Dashboard
             </h3>
           </div>
           <span onClick={() => toggleTab(6)} className='services__button'>
@@ -346,29 +346,23 @@ const Services = () => {
                 onClick={() => toggleTab(0)}
                 className='uil uil-times services__modal-close'
               ></i>
-              <h3 className='services__modal-title'>Product Designer</h3>
+              <h3 className='services__modal-title'>Dashboard</h3>
               <p className='services__modal-description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              React dashboard with seamless integration to google sheets. You can easily make changes to your data directly from the sheet, making it easier and faster to update your dashboard.
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
                 <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
-                    Lorem ipsum dolor sit amet.
+                  <a href="https://dashboard-thiago.netlify.app" target="_blank" className="services__modal-link">Website</a>
                   </p>
                 </li>
                 <li className='services__modal-service'>
                 <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
-                    Lorem ipsum dolor sit amet.
+                  <a href="https://docs.google.com/spreadsheets/d/1odWgxKhy10fLHpTpedeLBNEmcpyhOW4CxBDRV8u3lik/edit?usp=sharing" target="_blank" className="services__modal-link">Spreadsheet link</a>
                   </p>
-                </li>
-                <li className='services__modal-service'>
-                <i className='uil uil-github services__modal-icon'></i>
-                  <p className='services__modal-info'>
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                </li>
+                </li>            
               </ul>
             </div>
           </div>

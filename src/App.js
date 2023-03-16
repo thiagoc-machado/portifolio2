@@ -9,7 +9,6 @@ import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 import Footer from './footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
-import Game from './components/tetris/Game';
 function App() {
   return (
     <>
@@ -23,7 +22,6 @@ function App() {
         <Qualification />
         <Contact />
       </main>
-      {/* <Game rows={20} columns={10} /> */}
       <Footer />
       <ScrollUp />
     </>

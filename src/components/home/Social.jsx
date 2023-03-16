@@ -17,7 +17,7 @@ export const Social = () => {
         target='_blank'
         rel='noreferrer'
       >
-        <i className='uil uil-github'></i>
+        <i className='uil uil-linkedin'></i>
       </a>
       <a
         href='https://github.com/thiagoc-machado'
@@ -25,7 +25,7 @@ export const Social = () => {
         target='_blank'
         rel='noreferrer'
       >
-        <i className="uil uil-linkedin"></i>
+        <i className="uil uil-github"></i>
       </a>
     </div>
   );
