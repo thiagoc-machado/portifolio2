@@ -9,7 +9,9 @@ const Services = () => {
   return (
     <section className='services section' id='services'>
       <h2 className='section__title'>Projects</h2>
-      <span className='section__subtitle'>Take a look at what I'm working on</span>
+      <span className='section__subtitle'>
+        Take a look at what I'm working on
+      </span>
 
       <div className='services__container container grid'>
         <div className='services__content  services__card1'>
@@ -47,12 +49,13 @@ const Services = () => {
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
-                <i className='uil uil-globe services__modal-icon'></i>
+                  <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
                     <a
-                      href='https://servcenter.onrender.com/'
+                      href='https://servcenter.up.railway.app/'
                       target='_blank'
                       className='services__modal-link'
+                      rel="noreferrer"
                     >
                       Website (username and password 'root'
                     </a>
@@ -60,12 +63,13 @@ const Services = () => {
                   </p>
                 </li>
                 <li className='services__modal-service'>
-                <i className='uil uil-github services__modal-icon'></i>
+                  <i className='uil uil-github services__modal-icon'></i>
                   <p className='services__modal-info'>
                     <a
                       href='https://github.com/thiagoc-machado/ServCenter-Fullstack-Django'
                       target='_blank'
                       className='services__modal-link'
+                      rel="noreferrer"
                     >
                       Github project
                     </a>
@@ -110,7 +114,7 @@ const Services = () => {
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
-                <i className='uil uil-globe services__modal-icon'></i>
+                  <i className='uil uil-globe services__modal-icon'></i>
                   <a
                     href='https://triac.info/'
                     target='_blank'
@@ -120,7 +124,7 @@ const Services = () => {
                   </a>
                 </li>
                 <li className='services__modal-service'>
-                <i className='uil uil-github services__modal-icon'></i>
+                  <i className='uil uil-github services__modal-icon'></i>
                   <p className='services__modal-info'>
                     <a
                       href='https://github.com/thiagoc-machado/triac-web'
@@ -171,7 +175,7 @@ const Services = () => {
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
-                <i className='uil uil-globe services__modal-icon'></i>
+                  <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
                     <a
                       href='https://cap-empc.onrender.com/'
@@ -183,7 +187,7 @@ const Services = () => {
                   </p>
                 </li>
                 <li className='services__modal-service'>
-                <i className='uil uil-github services__modal-icon'></i>
+                  <i className='uil uil-github services__modal-icon'></i>
                   <p className='services__modal-info'>
                     <a
                       href='https://cap-empc.onrender.com/'
@@ -297,24 +301,42 @@ const Services = () => {
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
-                <i className='uil uil-globe services__modal-icon'></i>
+                  <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
-                  <a href="https://e-wok.onrender.com" target="_blank" className="services__modal-link">Website</a>
-
+                    <a
+                      href='https://e-wok.onrender.com'
+                      target='_blank'
+                      className='services__modal-link'
+                      rel="noreferrer"
+                    >
+                      Website
+                    </a>
                   </p>
                 </li>
                 <li className='services__modal-service'>
-                <i className='uil uil-globe services__modal-icon'></i>
+                  <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
-                  <a href="https://e-wok.onrender.com/endpoint" target="_blank" className="services__modal-link">Kitcken screen</a>
-
+                    <a
+                      href='https://e-wok.onrender.com/endpoint'
+                      target='_blank'
+                      className='services__modal-link'
+                      rel="noreferrer"
+                    >
+                      Kitcken screen
+                    </a>
                   </p>
                 </li>
                 <li className='services__modal-service'>
-                <i className='uil uil-github services__modal-icon'></i>
+                  <i className='uil uil-github services__modal-icon'></i>
                   <p className='services__modal-info'>
-                  <a href="https://github.com/thiagoc-machado/aLSuh1iIWKXxxGRJJ121" target="_blank" className="services__modal-link">Github project</a>
-
+                    <a
+                      href='https://github.com/thiagoc-machado/aLSuh1iIWKXxxGRJJ121'
+                      target='_blank'
+                      className='services__modal-link'
+                      rel="noreferrer"
+                    >
+                      Github project
+                    </a>
                   </p>
                 </li>
               </ul>
@@ -348,21 +370,37 @@ const Services = () => {
               ></i>
               <h3 className='services__modal-title'>Dashboard</h3>
               <p className='services__modal-description'>
-              React dashboard with seamless integration to google sheets. You can easily make changes to your data directly from the sheet, making it easier and faster to update your dashboard.
+                React dashboard with seamless integration to google sheets. You
+                can easily make changes to your data directly from the sheet,
+                making it easier and faster to update your dashboard.
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
-                <i className='uil uil-globe services__modal-icon'></i>
+                  <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
-                  <a href="https://dashboard-thiago.netlify.app" target="_blank" className="services__modal-link">Website</a>
+                    <a
+                      href='https://dashboard-thiago.netlify.app'
+                      target='_blank'
+                      className='services__modal-link'
+                      rel="noreferrer"
+                    >
+                      Website
+                    </a>
                   </p>
                 </li>
                 <li className='services__modal-service'>
-                <i className='uil uil-globe services__modal-icon'></i>
+                  <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
-                  <a href="https://docs.google.com/spreadsheets/d/1odWgxKhy10fLHpTpedeLBNEmcpyhOW4CxBDRV8u3lik/edit?usp=sharing" target="_blank" className="services__modal-link">Spreadsheet link</a>
+                    <a
+                      href='https://docs.google.com/spreadsheets/d/1odWgxKhy10fLHpTpedeLBNEmcpyhOW4CxBDRV8u3lik/edit?usp=sharing'
+                      target='_blank'
+                      className='services__modal-link'
+                      rel="noreferrer"
+                    >
+                      Spreadsheet link
+                    </a>
                   </p>
-                </li>            
+                </li>
               </ul>
             </div>
           </div>

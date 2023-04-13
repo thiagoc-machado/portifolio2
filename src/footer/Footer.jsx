@@ -41,7 +41,7 @@ const Footer = () => {
             target='_blank'
             rel='noreferrer'
           >
-            <i className='bx bxl-github'></i>
+            <i className='bx bxl-linkedin'></i>
           </a>
           <a
             href='https://github.com/thiagoc-machado'
@@ -49,7 +49,7 @@ const Footer = () => {
             target='_blank'
             rel='noreferrer'
           >
-            <i className='bx bxl-linkedin'></i>
+            <i className='bx bxl-github'></i>
           </a>
         </div>
         <span className="footer__copy"></span>
