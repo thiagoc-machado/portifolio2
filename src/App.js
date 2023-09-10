@@ -9,6 +9,9 @@ import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 import Footer from './footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
+import Tetris from './components/tetris/Game';
+
+
 function App() {
   return (
     <>
@@ -21,6 +24,7 @@ function App() {
         <Services />
         <Qualification />
         <Contact />
+        {/* <Tetris /> */}
       </main>
       <Footer />
       <ScrollUp />

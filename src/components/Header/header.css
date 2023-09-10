@@ -15,7 +15,7 @@
 }
 .nav__logo,
 .nav__toggle {
-  color: var(00tittle-color);
+  color: var(--tittle-color);
   font-weight: var(--font-medium);
 }
 .nav__list {

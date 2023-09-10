@@ -8,13 +8,28 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 0;
+  /* --hue: 0;
   --sat: 0%;
   --title-color: hsl(var(--hue), var(--sat), 20%);
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
+  --cards-color: 255, 255, 255, 0.5;
+  --cards-color-hover: 255, 255, 255:
+  
+  */
+
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --hue: 0;
+    --sat: 0%;
+    --title-color: hsl(var(--hue), var(--sat), 98%);
+    --title-color-dark: hsl(var(--hue), var(--sat), 100%);
+    --text-color: hsl(var(--hue), var(--sat), 54%);
+    --body-color: hsl(var(--hue), var(--sat), 9%);
+    --container-color: #363642;
+    --cards-color: 255, 255, 255, 0.5;
+    --cards-color-hover: 255, 255, 255:
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;

@@ -5,7 +5,7 @@
 }
 .services__content {
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: var(--container-color);
   padding: 6rem 0 2rem 2.5rem;
 }
@@ -99,44 +99,115 @@
   visibility: visible;
 }
 .services__card1 {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)),
+  background: linear-gradient(rgba(238, 237, 237, 0.1), rgba(44, 44, 44, 0.8)), 
     url('../../assets/work1.jpg');
   background-size: cover;
   background-position: center center;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+  color: #b0b0b0;
+  border-radius: 20px;
 }
+
+.services__card1:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), 
+    url('../../assets/work1.jpg');
+  background-size: cover;
+  background-position: center left;
+  cursor: pointer;
+  box-shadow: 5px -5px 10px #6d6d6d, -5px 5px 10px #4d4d4d;
+}
+
+
 .services__card2 {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)),
+  background: linear-gradient(rgba(238, 237, 237, 0.1), rgba(44, 44, 44, 0.8)), 
     url('../../assets/work2.jpg');
   background-size: cover;
   background-position: center center;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+}
+.services__card2:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), 
+    url('../../assets/work2.jpg');
+  background-size: cover;
+  background-position: center left;
+  cursor: pointer;
+  box-shadow: 5px -5px 10px #6d6d6d, -5px 5px 10px #4d4d4d;
 }
 .services__card3 {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)),
+  background: linear-gradient(rgba(238, 237, 237, 0.1), rgba(44, 44, 44, 0.8)), 
     url('../../assets/work3.jpg');
   background-size: cover;
   background-position: center center;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+}
+.services__card3:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), 
+    url('../../assets/work3.jpg');
+  background-size: cover;
+  background-position: center left;
+  cursor: pointer;
+  box-shadow: 5px -5px 10px #6d6d6d, -5px 5px 10px #4d4d4d;
 }
 .services__card4 {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)),
+  background: linear-gradient(rgba(238, 237, 237, 0.1), rgba(44, 44, 44, 0.8)), 
     url('../../assets/work4.jpg');
   background-size: cover;
   background-position: center center;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+}
+.services__card4:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), 
+    url('../../assets/work4.jpg');
+  background-size: cover;
+  background-position: center left;
+  cursor: pointer;
+  box-shadow: 5px -5px 10px #6d6d6d, -5px 5px 10px #4d4d4d;
 }
 .services__card5 {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)),
+  background: linear-gradient(rgba(238, 237, 237, 0.1), rgba(44, 44, 44, 0.8)), 
     url('../../assets/work5.jpg');
   background-size: cover;
   background-position: center center;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+}
+.services__card5:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), 
+    url('../../assets/work5.jpg');
+  background-size: cover;
+  background-position: center left;
+  cursor: pointer;
+  box-shadow: 5px -5px 10px #6d6d6d, -5px 5px 10px #4d4d4d;
 }
 .services__card6 {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)),
+  background: linear-gradient(rgba(238, 237, 237, 0.1), rgba(44, 44, 44, 0.8)), 
     url('../../assets/work6.jpg');
   background-size: cover;
   background-position: center center;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+}
+.services__card6:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), 
+    url('../../assets/work6.jpg');
+  background-size: cover;
+  background-position: center left;
+  cursor: pointer;
+  box-shadow: 5px -5px 10px #6d6d6d, -5px 5px 10px #4d4d4d;
 }
 .services__modal-link{
   text-decoration: none;
-  color: blue;
+  color: rgb(158, 207, 253);
 }
 
 /*=============== BREAKPOINTS ===============*/

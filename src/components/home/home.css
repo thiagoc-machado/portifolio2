@@ -49,8 +49,8 @@
   margin-bottom: var(--mb-3);
 }
 .home__img {
-  background: url(../../assets/profile.jpg);
-  filter:grayscale();
+  background: url(../../assets/logo.jpg);
+  /* filter:grayscale(); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

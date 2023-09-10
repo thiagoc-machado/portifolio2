@@ -9,7 +9,7 @@ const Backend = () => {
           <div className='skills__data'>
             <i class="uil uil-check"></i>
             <div>
-              <h3 className='skills__name'>Node</h3>
+              <h3 className='skills__name'>Django</h3>
               {/* <span className='skills__level'>6</span> */}
             </div>
           </div>
@@ -23,7 +23,7 @@ const Backend = () => {
           <div className='skills__data'>
             <i class="uil uil-check"></i>
             <div>
-              <h3 className='skills__name'>Django</h3>
+              <h3 className='skills__name'>Node</h3>
               {/* <span className='skills__level'>8</span> */}
             </div>
           </div>
@@ -47,10 +47,11 @@ const Backend = () => {
           <div className='skills__data'>
             <i class="uil uil-check"></i>
             <div>
-              <h3 className='skills__name'>WebScrapping</h3>
-              {/* <span className='skills__level'>7</span> */}
+              <h3 className='skills__name'>MySql</h3>
+              {/* <span className='skills__level'>5</span> */}
             </div>
           </div>
+          
         </div>
       </div>
     </div>
