@@ -12,6 +12,7 @@ const Qualification = () => {
       <span className='section__subtitle'>My personal journey</span>
 
       <div className='qualification__container container'>
+        <a className='qualification__legenda'>Click to see my educations</a>
         <div className='qualification__tabs'>
           <div
             className={
@@ -24,7 +25,6 @@ const Qualification = () => {
             <i className='uil uil-briefcase-alt qualification__icon'></i>
             Experience
           </div>
-
           <div
             className={
               toggleState === 2

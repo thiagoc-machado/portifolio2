@@ -21,8 +21,8 @@ function App() {
         <Home />
         <About />
         <Skills />
-        <Services />
         <Qualification />
+        <Services />
         <Contact />
         {/* <Tetris /> */}
       </main>
