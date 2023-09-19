@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     column-gap: 1.5rem;
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb-1);
 }
 .footer__social{
     display: flex;
@@ -34,9 +34,12 @@
     padding: 0.4rem;
     border-radius: 0.5rem;
     display: inline-flex;
+    transition: 0.2s;
 }
+
 .footer__social-link:hover{
-    background-color: var(--title-color-dark);
+    background-color: var(--button--hover);
+    transition: 0.2s;
 }
 .footer__copy{
     display: block;

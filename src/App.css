@@ -28,8 +28,11 @@
     --text-color: hsl(var(--hue), var(--sat), 54%);
     --body-color: hsl(var(--hue), var(--sat), 9%);
     --container-color: #363642;
+    --container-color-hover: rgb(43, 42, 49);
     --cards-color: 255, 255, 255, 0.5;
-    --cards-color-hover: 255, 255, 255:
+    --cards-color-hover: 255, 255, 255;
+    --button--hover:rgb(199, 199, 199);
+
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -170,10 +173,12 @@ img {
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  transition: 0.2s;
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--button--hover);
+  transition: 0.2s;
 }
 
 .button__icon {
