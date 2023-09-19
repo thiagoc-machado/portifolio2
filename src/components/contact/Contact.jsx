@@ -1,26 +1,36 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './contact.css';
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true); // começar a mostrar o spinner
 
     emailjs.sendForm(
       'service_8gh5vca',
       'template_xbuhk1b',
       form.current,
       '3PaqMmy4pZ6WPjmFa'
-    );
-    e.target.reset();
+    )
+    .then((result) => {
+        alert('Message sent successfully');
+        e.target.reset();
+        setIsLoading(false); // esconder o spinner
+    })
+    .catch((error) => {
+        alert('An error has occurred. Please try again later.');
+        setIsLoading(false); // esconder o spinner
+    });
   };
   return (
+    
     <section className='contact section' id='contact'>
-      <h2 className='section__title'>Get in touch</h2>
+      <h2 className='section__title '>Get in touch</h2>
       <span className='section__subtitle'>Contact me</span>
-
       <div className='contact__container container grid'>
         <div className='contact__content'>
           {/* <h3 className='contact__title'>Talk to me</h3> */}
@@ -89,7 +99,7 @@ const Contact = () => {
               <label className='contact__form-tag'>Mail</label>
               <input
                 type='text'
-                name='name'
+                name='email'
                 className='contact__form-input'
                 placeholder='Insert your email'
               />
@@ -107,6 +117,7 @@ const Contact = () => {
 
             <button className='button button--flex'>
               Send Message
+              {isLoading && <div className="spinner "> - Sending...</div>}
               <svg
                 className='button__icon'
                 xmlns='http://www.w3.org/2000/svg'

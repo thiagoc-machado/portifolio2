@@ -14,7 +14,7 @@
   order: 1;
   justify-self: center;
   width: 300px;
-  height: 300px;
+  -height: 300px;
   animation: profile__animate 8s ease-in-out infinite 1s;
 }
 @keyframes profile__animate {
