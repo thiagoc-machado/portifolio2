@@ -17,28 +17,33 @@
   color: var(--title-color);
   margin: 0 var(--mb-1);
   cursor: pointer;
-  background-color: rgb(163, 163, 163);
+  background-color: rgb(126, 126, 126);
   border-radius: 10px;
   padding: 5px
 }
 .qualification__button:hover {
-  background-color: rgb(126, 126, 126);
+  background-color: rgb(221, 221, 221);
+  color: rgb(0, 0, 0);
 }
 .qualification__icon {
   font-size: 1.8rem;
   margin-right: var(--mb-0-25);
 }
 .qualification__active {
-  color: white;
-  background-color: rgb(68, 68, 68);
+  color: rgb(0, 0, 0);
+  background-color: rgb(221, 221, 221);
 }
 .qualification__sections {
   display: grid;
   grid-template-columns: 0.5fr;
   justify-content: center;
+  
 }
 .qualification__content {
   display: none;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--container-color);
 }
 .qualification__content-active {
   display: block;

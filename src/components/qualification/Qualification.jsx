@@ -12,7 +12,6 @@ const Qualification = () => {
       <span className='section__subtitle'>My personal journey</span>
 
       <div className='qualification__container container'>
-        <a className='qualification__legenda'>Click to see my educations</a>
         <div className='qualification__tabs'>
           <div
             className={
@@ -121,6 +120,28 @@ const Qualification = () => {
               <div>
                 <span className='qualification__rounder'></span>
                 <span className='qualification__line'></span>
+              </div>
+            </div>
+            <div className='qualification__data'>
+              <div></div>
+
+              <div>
+                <span className='qualification__rounder'></span>
+                <span className='qualification__line'></span>
+              </div>
+
+              <div>
+                <h3 className='qualification__title'>
+                  English Leve: C1 
+                </h3>
+                <span className='qualification__subtitle'> EF SET Certifcate</span>
+                <h3 className='qualification__title'>
+                  Spanish Leve: C2 
+                </h3>
+                <span className='qualification__subtitle'> </span>
+                <h3 className='qualification__title'>
+                  Portuguese - native
+                </h3>
               </div>
             </div>
           </div>
