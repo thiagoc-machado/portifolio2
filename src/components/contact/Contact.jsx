@@ -1,10 +1,27 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './contact.css';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const form = useRef();
+  const form2 = useRef();
+
+  const [inViewRef, inView] = useInView({
+    triggerOnce: true,  // Dispara a animação apenas uma vez
+    threshold: 0.1     // A animação será disparada quando 10% do elemento estiver visível
+  });
+  const [inViewRef2, inView2] = useInView({
+    triggerOnce: true,  // Dispara a animação apenas uma vez
+    threshold: 0.1     // A animação será disparada quando 10% do elemento estiver visível
+  });
+  const [inViewRef3, inView3] = useInView({
+    triggerOnce: true,  // Dispara a animação apenas uma vez
+    threshold: 0.1     // A animação será disparada quando 10% do elemento estiver visível
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -37,25 +54,44 @@ const Contact = () => {
 
           <div className='contact__info'>
               <a href='mailto:thiagocmach@gmail.com' className='contact__card-link'>
-                  <div className='contact__card'>
-                      <i className='bx bx-mail-send contact__card-icon'></i>
-                      <h3 className='contact__card-title'>Email</h3>
-                      <span className='contact__card-data'>thiagocmach@gmail.com</span>
-                  </div>
+              <motion.div 
+                  ref={inViewRef}
+                  className='contact__card'
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.2 }}
+              >
+                  <i className='bx bx-mail-send contact__card-icon'></i>
+                  <h3 className='contact__card-title'>Email</h3>
+                  <span className='contact__card-data'>thiagocmach@gmail.com</span>
+              </motion.div>
+
               </a>
               <a href='https://www.linkedin.com/in/thiagomach/' className='contact__card-link'>
-                  <div className='contact__card'>
+              <motion.div 
+                  ref={inViewRef2}
+                  className='contact__card'
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={inView2 ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.2 }}
+                  >
                       <i className='bx bxl-linkedin contact__card-icon'></i>
                       <h3 className='contact__card-title'>Linkedin</h3>
                       <span className='contact__card-data'>linkedin.com/in/thiagomach</span>
-                  </div>
+                  </motion.div>
               </a>
               <a href='https://www.instagram.com/thiagoc.machado/' className='contact__card-link'>
-                  <div className='contact__card'>
+                <motion.div 
+                    ref={inViewRef3}
+                    className='contact__card'
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={inView3 ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.2 }}
+                  >
                       <i className='bx bxl-instagram contact__card-icon'></i>
                       <h3 className='contact__card-title'>Instagram</h3>
                       <span className='contact__card-data'>instagram.com/thiagoc.machado</span>
-                  </div>
+                    </motion.div>
               </a>
           </div>     
         </div>

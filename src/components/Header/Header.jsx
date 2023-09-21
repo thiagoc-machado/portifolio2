@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './header.css';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   /*Change background*/
@@ -14,7 +15,11 @@ const Header = () => {
   const [activeNav, setActiveNav] = useState('#home');
   return (
     <header className='header'>
-      <nav className='nav container'>
+      <motion.nav className='nav container'
+        initial={{ opacity: 0, position: 'relative', top: '-10px' }}
+        animate={{ opacity: 1, position: 'relative', top: '0px' }}
+        transition={{ duration: 0.5, delay: 0.5  }}
+      >
         <a href='index.html' className='nav__logo'>
           Thiago Machado
         </a>
@@ -80,7 +85,7 @@ const Header = () => {
         <div className='nav__toggle' onClick={() => showMenu(!Toggle)}>
           <i className='uil uil-apps'></i>
         </div>
-      </nav>
+      </motion.nav>
     </header>
   );
 };

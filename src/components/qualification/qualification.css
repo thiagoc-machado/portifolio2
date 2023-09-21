@@ -1,5 +1,6 @@
 .qualification__container {
-  max-width: 100%;
+  width: 870px;
+  max-width: 90%;
 }
 
 .qualification__tabs {
@@ -35,7 +36,7 @@
 }
 .qualification__sections {
   display: grid;
-  grid-template-columns: 0.5fr;
+  grid-template-columns: 1fr;
   justify-content: center;
   
 }
