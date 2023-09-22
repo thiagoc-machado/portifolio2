@@ -3,6 +3,7 @@ import './about.css';
 import AboutImg from '../../assets/about.jpg';
 import CV from '../../assets/CV-EN.pdf';
 import Info from './Info';
+import { motion } from 'framer-motion';
 
 function About() {
   return (
@@ -10,17 +11,26 @@ function About() {
       <h2 className='section__title'>About Me</h2>
       <span className='section__subtitle'>My introduction</span>
       <div className='about__container container grid'>
-        <img src={AboutImg} alt='' className='about__img' />
+        <motion.img src={AboutImg} alt='' className='about__img'
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1, delay: 0.2  }}
+        
+        ></motion.img>
         <div className='about__data'>
           <Info />
-          <p className='about__description'>
+          <motion.p className='about__description'
+            initial={{ opacity: 0, z: -10, }}
+            whileInView={{ opacity: 1, z: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
             As a fullstack developer, I'm passionate about creating innovative
             solutions that bring ideas to life. From frontend design to backend
             development, I bring a comprehensive approach to every project I
             work on. With a focus on clean and efficient code, I'm dedicated to
             delivering digital experiences that are not only functional but also
             beautiful and intuitive.
-          </p>
+          </motion.p>
           <a download='' href={CV} className='button button-flex'>
             Download CV
             <svg

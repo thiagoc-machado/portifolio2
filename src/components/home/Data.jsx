@@ -6,23 +6,20 @@ const Data = () => {
     <div className='home__data'>
       <motion.h1 className='home__title'
        initial={{ opacity: 0, position: 'relative', top: '10px', right: '10px' }}
-       animate={{ opacity: 1, position: 'relative', top: '0px', right: '0px'  }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+       whileInView={{ opacity: 1, position: 'relative', top: '0px', right: '0px'  }}
         >
         Thiago Machado
       </motion.h1>
       <motion.h3 className='home__subtitle'
         initial={{ opacity: 0, position: 'relative', left: '50px' }}
-        animate={{ opacity: 1, position: 'relative', left: '0px' }}
-        transition={{ duration: 0.5}}
+        whileInView={{ opacity: 1, position: 'relative', left: '0px' }}
       >
         FullStack Developer
       </motion.h3>
       <motion.p className='home__description'
       delay={1}
         initial={{ opacity: 0, position: 'relative', right: '50px'  }}
-        animate={{ opacity: 1, position: 'relative', right: '0px' }}
-        transition={{ duration: 0.5}}
+        whileInView={{ opacity: 1, position: 'relative', right: '0px' }}
       >
         Building beautiful and functional digital experiences one line of code at a time
       </motion.p>

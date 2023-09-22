@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './services.css';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const [toggleState, setToggleState] = useState(0);
@@ -14,7 +15,10 @@ const Services = () => {
       </span>
 
       <div className='services__container container grid'>
-        <div className='services__content  services__card1'>
+        <motion.div className='services__content  services__card1'
+        initial={{opacity: 0, y: -5, x: -5 }}
+        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        >
           <div onClick={() => toggleTab(1)}>
             <i className='uil uil-web-grid services__icon'></i>
             <h3 className='services__title'>
@@ -78,8 +82,11 @@ const Services = () => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className='services__content services__card2'>
+        </motion.div>
+        <motion.div className='services__content services__card2'
+        initial={{opacity: 0, y: -5 }}
+        whileInView={{ opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        >
           <div onClick={() => toggleTab(2)}>
             <i className='uil uil-web-grid services__icon'></i>
             <h3 className='services__title'>
@@ -138,8 +145,11 @@ const Services = () => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className='services__content services__card3'>
+        </motion.div>
+        <motion.div className='services__content services__card3'
+        initial={{opacity: 0, y: -5, x: 5 }}
+        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        >
           <div onClick={() => toggleTab(3)}>
             <i className='uil uil-web-grid services__icon'></i>
             <h3 className='services__title'>
@@ -201,8 +211,11 @@ const Services = () => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className='services__content services__card4'>
+        </motion.div>
+        <motion.div className='services__content services__card4'
+        initial={{opacity: 0, y: 5, x: -5 }}
+        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        >
           <div onClick={() => toggleTab(4)}>
             <i className='uil uil-web-grid services__icon'></i>
             <h3 className='services__title'>
@@ -263,8 +276,11 @@ const Services = () => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className='services__content services__card5'>
+        </motion.div>
+        <motion.div className='services__content services__card5'
+        initial={{opacity: 0, y: 5, x: 0 }}
+        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        >
           <div onClick={() => toggleTab(5)}>
             <i className='uil uil-web-grid services__icon'></i>
             <h3 className='services__title'>
@@ -342,8 +358,11 @@ const Services = () => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className='services__content services__card6'>
+        </motion.div>
+        <motion.div className='services__content services__card6'
+        initial={{opacity: 0, y: 5, x: 5 }}
+        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        >
           <div onClick={() => toggleTab(6)}>
             <i className='uil uil-web-grid services__icon'></i>
             <h3 className='services__title'>
@@ -404,7 +423,7 @@ const Services = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
