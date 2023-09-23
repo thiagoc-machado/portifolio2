@@ -33,12 +33,12 @@
 .home__subtitle {
   position: relative;
   font-size: var(--h3-font-size);
-  padding-left: 5.4rem; 
+  padding-left: 5.4rem;
   font-weight: var(--font-normal);
   margin-bottom: var(--mb-1);
 }
 .home__subtitle::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 70px;
   height: 1px;
@@ -51,7 +51,7 @@
   margin-bottom: var(--mb-3);
 }
 .home__img {
-  display:none;
+  display: none;
   background: url(../../assets/logo.jpg);
   /* filter:grayscale(); */
   background-repeat: no-repeat;
@@ -144,21 +144,20 @@
     order: initial;
     display: none;
   }
-  .home_hand{
+  .home_hand {
     width: 22px;
     height: 22px;
   }
-  
 }
 
 /* For small devices */
 @media screen and (max-width: 350px) {
-  .home__img{
-    width: 180px;  
+  .home__img {
+    width: 180px;
     height: 180px;
     display: none;
   }
-  .home_hand{
+  .home_hand {
     width: 22px;
     height: 22px;
   }

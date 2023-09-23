@@ -1,7 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
@@ -20,19 +19,18 @@
   
   */
 
-    /*Color mode HSL(hue, saturation, lightness)*/
-    --hue: 0;
-    --sat: 0%;
-    --title-color: hsl(var(--hue), var(--sat), 98%);
-    --title-color-dark: hsl(var(--hue), var(--sat), 100%);
-    --text-color: hsl(var(--hue), var(--sat), 54%);
-    --body-color: hsl(var(--hue), var(--sat), 9%);
-    --container-color: #363642;
-    --container-color-hover: rgb(43, 42, 49);
-    --cards-color: 255, 255, 255, 0.5;
-    --cards-color-hover: 255, 255, 255;
-    --button--hover:rgb(199, 199, 199);
-
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --hue: 0;
+  --sat: 0%;
+  --title-color: hsl(var(--hue), var(--sat), 98%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 100%);
+  --text-color: hsl(var(--hue), var(--sat), 54%);
+  --body-color: hsl(var(--hue), var(--sat), 9%);
+  --container-color: #363642;
+  --container-color-hover: rgb(43, 42, 49);
+  --cards-color: 255, 255, 255, 0.5;
+  --cards-color-hover: 255, 255, 255;
+  --button--hover: rgb(199, 199, 199);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
