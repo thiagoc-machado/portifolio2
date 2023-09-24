@@ -27,7 +27,7 @@
   --text-color: hsl(var(--hue), var(--sat), 54%);
   --body-color: hsl(var(--hue), var(--sat), 9%);
   --container-color: #363642;
-  --container-color-hover: rgb(43, 42, 49);
+  --container-color-hover: rgb(85, 82, 105);
   --cards-color: 255, 255, 255, 0.5;
   --cards-color-hover: 255, 255, 255;
   --button--hover: rgb(199, 199, 199);

@@ -1,7 +1,7 @@
 import { defaultCell } from "./Cell";
 import { movePlayer } from "./PlayerController";
 import { transferToBoard } from "./Tetrominoes";
-
+console.log("board.jsx()business");
 export const buildBoard = ({ rows, columns }) => {
   const builtRows = Array.from({ length: rows }, () =>
     Array.from({ length: columns }, () => ({ ...defaultCell }))
