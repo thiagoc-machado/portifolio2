@@ -13,6 +13,9 @@ export const buildBoard = ({ rows, columns }) => {
   };
 };
 
+
+
+
 const findDropPosition = ({ board, position, shape }) => {
   let max = board.size.rows - position.row + 1;
   let row = 0;
