@@ -56,7 +56,7 @@ const Services = () => {
                   <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
                     <a
-                      href='https://servcenter2.up.railway.app/'
+                      href='https://servcenter.up.railway.app/'
                       target='_blank'
                       className='services__modal-link'
                       rel="noreferrer"

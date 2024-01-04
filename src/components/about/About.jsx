@@ -27,7 +27,7 @@ function About() {
             whileInView={{ opacity: 1, z: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            As a fullstack developer, I'm passionate about creating innovative
+            I'm passionate about creating innovative
             solutions that bring ideas to life. From frontend design to backend
             development, I bring a comprehensive approach to every project I
             work on. With a focus on clean and efficient code, I'm dedicated to
