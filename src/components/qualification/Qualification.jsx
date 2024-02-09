@@ -353,6 +353,7 @@ const Qualification = () => {
                                 </h3>
                             </motion.div>
                         </div>
+                        <div><br></br></div>
                     </div>
                     <div
                         className={
@@ -364,53 +365,6 @@ const Qualification = () => {
                         <div className="qualification__data">
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
-                                whileInView={{
-                                    opacity: 1,
-                                    x: 0,
-                                    transition: {
-                                        type: "spring",
-                                        stiffness: 100,
-                                        duration: 0.5,
-                                        delay: 0.2,
-                                    },
-                                }}
-                            >
-                                <h3 className="qualification__title">
-                                    Stocken Capital
-                                </h3>
-                                <span className="qualification__subtitle">
-                                    Backend Developer<br></br>05/2023 - Present
-                                </span>
-                                <span className="qualification__subtitle">
-                                    The company offers a customized legaltech
-                                    SaaS tool designed to enable businesses to
-                                    digitize their corporate governance and
-                                    capital. Within this organization, the role
-                                    involves overseeing the entire Django
-                                    backend. This includes refactoring existing
-                                    code, introducing new features and APIs,
-                                    integrating blockchain data transfers,
-                                    managing payments and financial transactions
-                                    on the platform, and utilizing technologies
-                                    such as Docker, Amazon EC2, etc.
-                                </span>
-                            </motion.div>
-                            <div>
-                                <span className="qualification__rounder"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <div className="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span className="qualification__rounder"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
                                 whileInView={{
                                     opacity: 1,
                                     x: 0,
@@ -443,6 +397,53 @@ const Qualification = () => {
                                     Through these endeavors, I gained extensive
                                     knowledge and honed my expertise in these
                                     key technologies.
+                                </span>
+                            </motion.div>
+                            <div>
+                                <span className="qualification__rounder"></span>
+                                <span className="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div className="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span className="qualification__rounder"></span>
+                                <span className="qualification__line"></span>
+                            </div>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                        type: "spring",
+                                        stiffness: 100,
+                                        duration: 0.5,
+                                        delay: 0.2,
+                                    },
+                                }}
+                            >
+                                <h3 className="qualification__title">
+                                    Stocken Capital
+                                </h3>
+                                <span className="qualification__subtitle">
+                                    Backend Developer<br></br>05/2023 - 01/2024
+                                </span>
+                                <span className="qualification__subtitle">
+                                    The company offers a customized legaltech
+                                    SaaS tool designed to enable businesses to
+                                    digitize their corporate governance and
+                                    capital. Within this organization, the role
+                                    involves overseeing the entire Django
+                                    backend. This includes refactoring existing
+                                    code, introducing new features and APIs,
+                                    integrating blockchain data transfers,
+                                    managing payments and financial transactions
+                                    on the platform, and utilizing technologies
+                                    such as Docker, Amazon EC2, etc.
                                 </span>
                             </motion.div>
                         </div>
@@ -486,6 +487,7 @@ const Qualification = () => {
                                 <span className="qualification__line"></span>
                             </div>
                         </div>
+                        <div><br></br></div>
                         {/* <div className='qualification__data'>
               <div></div>
 

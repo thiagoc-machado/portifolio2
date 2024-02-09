@@ -34,11 +34,12 @@ const Backend = () => {
           >
             <i class="uil uil-check"></i>
             <div>
-              <h3 className='skills__name'>Node</h3>
+              <h3 className='skills__name'>FastAPI</h3>
               {/* <span className='skills__level'>8</span> */}
             </div>
           </motion.div>
         </div>
+        
 
         <div className='skills__group'>
           <motion.div className='skills__data'
@@ -57,7 +58,7 @@ const Backend = () => {
           >
             <i class="uil uil-check"></i>
             <div>
-              <h3 className='skills__name'>MongoDb</h3>
+              <h3 className='skills__name'>PostgreSQL</h3>
               {/* <span className='skills__level'>5</span> */}
             </div>
           </motion.div>
