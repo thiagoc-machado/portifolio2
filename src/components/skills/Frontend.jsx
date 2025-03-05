@@ -50,7 +50,7 @@ const Frontend = () => {
           >
           <i class="uil uil-check"></i>
             <div>
-              <h3 className='skills__name'>Material UI</h3>
+              <h3 className='skills__name'>VUE</h3>
               {/* <span className='skills__level'>9</span> */}
             </div>
           </motion.div>

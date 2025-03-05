@@ -129,13 +129,13 @@ const Qualification = () => {
                                     JSON web services.
                                 </span>
                                 <span className="qualification__subtitle">
-                                        <a
-                                            href="https://www.coursera.org/account/accomplishments/specialization/certificate/B5UECRHYKRLP"
-                                            target="_blank"
-                                        >
-                                            View certificate
-                                        </a>
-                                    </span>
+                                    <a
+                                        href="https://www.coursera.org/account/accomplishments/specialization/certificate/B5UECRHYKRLP"
+                                        target="_blank"
+                                    >
+                                        View certificate
+                                    </a>
+                                </span>
                             </motion.div>
                             <div>
                                 <span className="qualification__rounder"></span>
@@ -177,13 +177,13 @@ const Qualification = () => {
                                     Applications.
                                 </span>
                                 <span className="qualification__subtitle">
-                                        <a
-                                            href="https://www.coursera.org/account/accomplishments/specialization/certificate/5EJK9ET78ZXR"
-                                            target="_blank"
-                                        >
-                                            View certificate
-                                        </a>
-                                    </span>
+                                    <a
+                                        href="https://www.coursera.org/account/accomplishments/specialization/certificate/5EJK9ET78ZXR"
+                                        target="_blank"
+                                    >
+                                        View certificate
+                                    </a>
+                                </span>
                             </motion.div>
                         </div>
                         <div className="qualification__data">
@@ -211,13 +211,13 @@ const Qualification = () => {
                                     using HTML and CSS.
                                 </span>
                                 <span className="qualification__subtitle">
-                                        <a
-                                            href="https://www.coursera.org/account/accomplishments/certificate/VYAQDA5J67DH"
-                                            target="_blank"
-                                        >
-                                            View certificate
-                                        </a>
-                                    </span>
+                                    <a
+                                        href="https://www.coursera.org/account/accomplishments/certificate/VYAQDA5J67DH"
+                                        target="_blank"
+                                    >
+                                        View certificate
+                                    </a>
+                                </span>
                             </motion.div>
                             <div>
                                 <span className="qualification__rounder"></span>
@@ -258,13 +258,13 @@ const Qualification = () => {
                                     Hosting.
                                 </span>
                                 <span className="qualification__subtitle">
-                                        <a
-                                            href="https://www.coursera.org/account/accomplishments/certificate/VLWKGM44GB28"
-                                            target="_blank"
-                                        >
-                                            View certificate
-                                        </a>
-                                    </span>
+                                    <a
+                                        href="https://www.coursera.org/account/accomplishments/certificate/VLWKGM44GB28"
+                                        target="_blank"
+                                    >
+                                        View certificate
+                                    </a>
+                                </span>
                             </motion.div>
                         </div>
                         <div className="qualification__data">
@@ -293,13 +293,13 @@ const Qualification = () => {
                                     learning service
                                 </span>
                                 <span className="qualification__subtitle">
-                                        <a
-                                            href="https://www.coursera.org/account/accomplishments/certificate/RATTNRJU6Y2W"
-                                            target="_blank"
-                                        >
-                                            View certificate
-                                        </a>
-                                    </span>
+                                    <a
+                                        href="https://www.coursera.org/account/accomplishments/certificate/RATTNRJU6Y2W"
+                                        target="_blank"
+                                    >
+                                        View certificate
+                                    </a>
+                                </span>
                             </motion.div>
                             <div>
                                 <span className="qualification__rounder"></span>
@@ -333,15 +333,14 @@ const Qualification = () => {
                                 <span className="qualification__subtitle">
                                     {" "}
                                     EF SET Certifcate
-
                                 </span>
                                 <br></br>
-                                        <a
-                                            href="https://www.efset.org/cert/TeY1XU?cid=em100a"
-                                            target="_blank"
-                                        >
-                                            View certificate
-                                        </a>
+                                <a
+                                    href="https://www.efset.org/cert/TeY1XU?cid=em100a"
+                                    target="_blank"
+                                >
+                                    View certificate
+                                </a>
                                 <h3 className="qualification__title">
                                     Spanish Leve: C2
                                 </h3>
@@ -353,8 +352,11 @@ const Qualification = () => {
                                 </h3>
                             </motion.div>
                         </div>
-                        <div><br></br></div>
+                        <div>
+                            <br></br>
+                        </div>
                     </div>
+
                     <div
                         className={
                             toggleState === 1
@@ -362,6 +364,50 @@ const Qualification = () => {
                                 : "qualification__content"
                         }
                     >
+                        <div className="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span className="qualification__rounder"></span>
+                                <span className="qualification__line"></span>
+                            </div>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                        type: "spring",
+                                        stiffness: 100,
+                                        duration: 0.5,
+                                        delay: 0.2,
+                                    },
+                                }}
+                            >
+                                <h3 className="qualification__title">
+                                    Aidea Legal - Grupo Planeta
+                                </h3>
+                                <span className="qualification__subtitle">
+                                    FullStack Developer<br></br>03/2024 -
+                                    03/2025
+                                </span>
+                                <span className="qualification__subtitle">
+                                    Development of a legal automation system
+                                    using Django Rest Framework (DRF), Vue.js,
+                                    Vuex, and PostgreSQL, hosted on AWS with S3
+                                    for file storage, EC2 for deployment, and
+                                    RDS for databases. Utilized Nginx for
+                                    reverse proxy and Docker for
+                                    containerization. Worked equally on backend
+                                    and frontend development, including API
+                                    integration, authentication systems, and
+                                    data management. Implemented RESTful
+                                    services and optimized performance using
+                                    caching and indexing techniques
+                                </span>
+                            </motion.div>
+                        </div>
                         <div className="qualification__data">
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
@@ -487,26 +533,9 @@ const Qualification = () => {
                                 <span className="qualification__line"></span>
                             </div>
                         </div>
-                        <div><br></br></div>
-                        {/* <div className='qualification__data'>
-              <div></div>
-
-              <div>
-                <span className='qualification__rounder'></span>
-                <span className='qualification__line'></span>
-              </div>
-
-              <div>
-                <h3 className='qualification__title'>Freelancer</h3>
-                <span className='qualification__subtitle'>
-                  vv
-                </span>
-
-                <div className='qualification__calendar'>
-                  <i className='uil uil-calndar-alt'></i>12/2022 - Present
-                </div>
-              </div>
-            </div> */}
+                        <div>
+                            <br></br>
+                        </div>
                     </div>
                 </div>
             </div>

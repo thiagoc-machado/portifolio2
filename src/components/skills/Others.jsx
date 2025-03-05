@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Datas = () => {
+const Others = () => {
     return (
         <div className="skills__content">
-            <h3 className="skills__title">Data</h3>
+            <h3 className="skills__title">Others</h3>
             <div className="skills__box">
                 <div className="skills__group">
                     <motion.div
@@ -23,7 +23,7 @@ const Datas = () => {
                     >
                         <i class="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">Pandas</h3>
+                            <h3 className="skills__name">Google / microsoft oauth</h3>
                             {/* <span className='skills__level'>6</span> */}
                         </div>
                     </motion.div>
@@ -43,7 +43,7 @@ const Datas = () => {
                     >
                         <i class="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">Numpy</h3>
+                            <h3 className="skills__name">Python Scripts</h3>
                             {/* <span className='skills__level'>9</span> */}
                         </div>
                     </motion.div>
@@ -63,7 +63,7 @@ const Datas = () => {
                     >
                         <i class="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">Selenium</h3>
+                            <h3 className="skills__name">Postman / Insomnia</h3>
                             {/* <span className='skills__level'>8</span> */}
                         </div>
                     </motion.div>
@@ -86,7 +86,7 @@ const Datas = () => {
                     >
                         <i class="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">Scrapy</h3>
+                            <h3 className="skills__name">RESTful APIs</h3>
                             {/* <span className='skills__level'>7</span> */}
                         </div>
                     </motion.div>
@@ -106,7 +106,7 @@ const Datas = () => {
                     >
                         <i class="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">BeautfulSoup</h3>
+                            <h3 className="skills__name">Certbot</h3>
                             {/* <span className='skills__level'>5</span> */}
                         </div>
                     </motion.div>
@@ -126,7 +126,7 @@ const Datas = () => {
                     >
                         <i class="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">Matplotlib</h3>
+                            <h3 className="skills__name">Bash Scripting</h3>
                             {/* <span className='skills__level'>5</span> */}
                         </div>
                     </motion.div>
@@ -136,4 +136,4 @@ const Datas = () => {
     );
 };
 
-export default Datas;
+export default Others;
