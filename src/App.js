@@ -11,7 +11,7 @@ import Footer from "./footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import Tetris from "./components/tetris/Game";
 // import Game from "./components/Game/game";
-// import Ninja from "./components/Ninja/ninja";
+import Ninja from "./components/Ninja/ninja";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         <Contact />
         {/* <Tetris /> */}
         {/* <Game /> */}
-        {/* <Ninja /> */}
+        <Ninja />
       </main>
       <Footer />
       <ScrollUp />

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import "./script.js";
-import "./script.css";
-import { startGame } from "./script.js"; 
+import React, { Component } from 'react';
+import './script.js';
+import './script.css';
+import { startGame } from './script.js';
 
 class GameComponent extends Component {
   constructor(props) {
@@ -11,11 +11,20 @@ class GameComponent extends Component {
 
   componentDidMount() {
     const canvas = this.canvasRef.current;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  
-    startGame(canvas);
-  }
+    if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Espera o DOM carregar completamente
+        setTimeout(() => {
+            startGame(canvas);  // Passa o canvas como argumento
+        }, 100);  // Ajuste o tempo se necessário
+    } else {
+        console.error('Canvas não encontrado!');
+    }
+}
+
+
   render() {
     return (
       <div>
@@ -60,8 +69,7 @@ class GameComponent extends Component {
                 value="Save"
                 className="saveBtn"
               >
-                {" "}
-                Save{" "}
+                Save
               </button>
             </form>
           </div>
@@ -75,11 +83,6 @@ class GameComponent extends Component {
           </button>
         </div>
         <div id="game-container"></div>
-        <style>
-          {`
-              /* Estilos do jogo */
-            `}
-        </style>
       </div>
     );
   }
