@@ -86,14 +86,14 @@
   flex-wrap: nowrap;
   flex-direction: column;
   position: absolute;
-  padding: 20px;
+  padding: 25px;
   border-radius: 20px;
   right: 20px;
   color: var(--ter-color);
   font-weight: bold;
   border: 2px solid var(--font-color);
   background-color: #171730;
-  font-size: 1.2em;
+  font-size: 1em;
   margin-bottom: 160px;
 }
 #hiscore {

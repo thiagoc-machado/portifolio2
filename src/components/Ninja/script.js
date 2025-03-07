@@ -398,7 +398,7 @@ const fallingSpeed = 2;
 const heroWidth = 17; // 24
 const heroHeight = 30; // 40
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
     canvas = document.getElementById("game");
     if (!canvas) {
         console.warn("Canvas não encontrado! Criando dinamicamente...");
@@ -420,6 +420,30 @@ document.addEventListener("DOMContentLoaded", function () {
     scoreElement = document.getElementById("score");
     actionButton = document.getElementById("action");
     gameoverElement = document.getElementById("gameover");
+
+    if (!actionButton) {
+        console.error("Elemento com ID 'action' não encontrado!");
+    } else {
+        actionButton.addEventListener("click", function (event) {
+            if (phase === "waiting") {
+                lastTimestamp = undefined;
+                event.preventDefault();
+                introductionElement.style.opacity = 0;
+                phase = "stretching";
+                window.requestAnimationFrame(animate);
+            }
+        });
+
+        actionButton.addEventListener("touchstart", function (event) {
+            if (phase === "waiting") {
+                lastTimestamp = undefined;
+                event.preventDefault();
+                introductionElement.style.opacity = 0;
+                phase = "stretching";
+                window.requestAnimationFrame(animate);
+            }
+        });
+    }
 
     resetGame(canvas); // Passe o canvas como argumento
 
@@ -504,12 +528,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const savename = document.getElementById("savename");
-    if (savename) {
-        savename.addEventListener("submit", handleFormSubmit);
-    } else {
+    if (!savename) {
         console.error("Elemento com ID 'savename' não encontrado!");
+    } else {
+        savename.addEventListener("submit", handleFormSubmit);
     }
-
     resetGame(document.getElementById("game"));
 
     // If space was pressed restart the game
@@ -521,27 +544,30 @@ document.addEventListener("DOMContentLoaded", function () {
     // }
     // });
 
-    action.addEventListener("click", function (event) {
-        if (phase == "waiting") {
-            lastTimestamp = undefined;
-            event.preventDefault();
-            introductionElement.style.opacity = 0;
-            phase = "stretching";
-            window.requestAnimationFrame(animate);
-        }
-    });
-    //item.addEventListener("touchstart", pressingDown, false);
-    //item.addEventListener("touchend", notPressingDown, false);
+    actionButton = document.getElementById("action");
+    if (!actionButton) {
+        console.error("Elemento com ID 'action' não encontrado!");
+    } else {
+        actionButton.addEventListener("click", function (event) {
+            if (phase === "waiting") {
+                lastTimestamp = undefined;
+                event.preventDefault();
+                introductionElement.style.opacity = 0;
+                phase = "stretching";
+                window.requestAnimationFrame(animate);
+            }
+        });
 
-    action.addEventListener("touchstart", function (event) {
-        if (phase == "waiting") {
-            lastTimestamp = undefined;
-            event.preventDefault();
-            introductionElement.style.opacity = 0;
-            phase = "stretching";
-            window.requestAnimationFrame(animate);
-        }
-    });
+        actionButton.addEventListener("touchstart", function (event) {
+            if (phase === "waiting") {
+                lastTimestamp = undefined;
+                event.preventDefault();
+                introductionElement.style.opacity = 0;
+                phase = "stretching";
+                window.requestAnimationFrame(animate);
+            }
+        });
+    }
     window.addEventListener("mouseup", function (event) {
         if (phase == "stretching") {
             phase = "turning";
