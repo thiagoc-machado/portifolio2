@@ -19,7 +19,7 @@ const Tetris = ({ rows, columns, setGameOver }) => {
     resetPlayer,
     addLinesCleared
   });
-
+  console.log(setBoard);
   return (
     <div className="Tetris">
       <Board board={board} />
