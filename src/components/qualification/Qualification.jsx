@@ -49,6 +49,52 @@ const Qualification = () => {
                         {/* *********************************************** */}
 
                         <div className="qualification__data">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                        type: "spring",
+                                        stiffness: 100,
+                                        duration: 0.5,
+                                        delay: 0.2,
+                                    },
+                                }}
+                            >
+                                <h3 className="qualification__title">
+                                Cloud-Native Development with OpenShift and
+                                Kubernetes
+                                </h3>
+                                <span className="qualification__subtitle">
+                                Red Hat<br></br>2025
+                                </span>
+                                <span className="qualification__subtitle">
+                                    Completed a
+                                    3-course specialization focused on
+                                    developing, deploying, scaling, and
+                                    troubleshooting containerized applications
+                                    using Kubernetes and Red Hat OpenShift. The
+                                    program included practical, hands-on
+                                    projects and emphasized real-world
+                                    application of cloud-native technologies..
+                                </span>
+                                <span className="qualification__subtitle">
+                                    <a
+                                        href="https://coursera.org/share/5bbedf913fe6c6ee32f3ca7b60daa3a4"
+                                        target="_blank"
+                                    >
+                                        View certificate
+                                    </a>
+                                </span>
+                            </motion.div>
+                            <div>
+                                <span className="qualification__rounder"></span>
+                                <span className="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div className="qualification__data">
                             <div></div>
 
                             <div>

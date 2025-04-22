@@ -56,12 +56,12 @@ const Services = () => {
                   <i className='uil uil-globe services__modal-icon'></i>
                   <p className='services__modal-info'>
                     <a
-                      href='https://servcenter.up.railway.app/'
+                      href='https://servcenter-fullstack-django.onrender.com'
                       target='_blank'
                       className='services__modal-link'
                       rel="noreferrer"
                     >
-                      Website (username and password 'root'
+                      Website (username and password 'teste'
                     </a>
                     )
                   </p>
