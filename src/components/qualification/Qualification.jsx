@@ -46,6 +46,67 @@ const Qualification = () => {
                                 : "qualification__content"
                         }
                     >
+                        {/* ***********************************************  */}
+                        <div className="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span className="qualification__rounder"></span>
+                                <span className="qualification__line"></span>
+                            </div>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                        type: "spring",
+                                        stiffness: 100,
+                                        duration: 0.5,
+                                        delay: 0.2,
+                                    },
+                                }}
+                            >
+                                <h3 className="qualification__title">
+                                    IBM AI Engineering Professional Certificate
+                                </h3>
+                                <span className="qualification__subtitle">
+                                    IBM Networks - 2025
+                                </span>
+                                <div>
+                                    <span className="qualification__title"></span>
+                                    <ul>
+                                        <li>
+                                            The IBM AI Engineering Professional
+                                            Certificate provides practical
+                                            training in building, fine-tuning,
+                                            and deploying deep learning models,
+                                            including LLMs. It covers supervised
+                                            and unsupervised learning with
+                                            Python, using Keras, PyTorch, and
+                                            TensorFlow. The program includes NLP
+                                            applications with frameworks like
+                                            Hugging Face and LangChain, and
+                                            explores models such as GPT, BERT,
+                                            and LLaMA. It concludes with a
+                                            hands-on project using LangChain and
+                                            RAG.
+                                        </li>
+                                    </ul>
+                                    <br></br>
+                                    <span className="qualification__subtitle">
+                                        <a
+                                            href="https://www.coursera.org/account/accomplishments/specialization/certificate/R3V4WZAZA2BY"
+                                            target="_blank"
+                                        >
+                                            View certificate
+                                        </a>
+                                    </span>
+                                </div>
+                            </motion.div>
+                        </div>
+
                         {/* *********************************************** */}
 
                         <div className="qualification__data">
@@ -63,16 +124,15 @@ const Qualification = () => {
                                 }}
                             >
                                 <h3 className="qualification__title">
-                                Cloud-Native Development with OpenShift and
-                                Kubernetes
+                                    Cloud-Native Development with OpenShift and
+                                    Kubernetes
                                 </h3>
                                 <span className="qualification__subtitle">
-                                Red Hat<br></br>2025
+                                    Red Hat<br></br>2025
                                 </span>
                                 <span className="qualification__subtitle">
-                                    Completed a
-                                    3-course specialization focused on
-                                    developing, deploying, scaling, and
+                                    Completed a 3-course specialization focused
+                                    on developing, deploying, scaling, and
                                     troubleshooting containerized applications
                                     using Kubernetes and Red Hat OpenShift. The
                                     program included practical, hands-on
