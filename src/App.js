@@ -9,9 +9,21 @@ import Qualification from "./components/qualification/Qualification";
 import Contact from "./components/contact/Contact";
 import Footer from "./footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
-import Tetris from "./components/tetris/Game";
+// import Tetris from "./components/tetris/Game";
 // import Game from "./components/Game/game";
 import Ninja from "./components/Ninja/ninja";
+console.log(`
+  ████████╗██╗  ██╗██╗ █████╗  ██████╗  ██████╗     
+  ╚══██╔══╝██║  ██║██║██╔══██╗██╔════╝ ██╔═══██╗
+     ██║   ███████║██║███████║██║  ███╗██║   ██║
+     ██║   ██╔══██║██║██╔══██║██║   ██║██║   ██║
+     ██║   ██║  ██║██║██║  ██║╚██████╔╝╚██████╔╝
+     ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝
+  
+  Hi developer 👀
+  If you're reading this, you probably know what you're doing...
+  But if not, call Thiago 😎
+  `);
 
 function App() {
   return (

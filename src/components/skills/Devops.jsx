@@ -21,7 +21,7 @@ const Devops = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Amazon AWS</h3>
                             {/* <span className='skills__level'>6</span> */}
@@ -41,7 +41,7 @@ const Devops = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Nginx / Apache</h3>
                             {/* <span className='skills__level'>9</span> */}
@@ -61,7 +61,7 @@ const Devops = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Linux / Ubuntu Server</h3>
                             {/* <span className='skills__level'>8</span> */}
@@ -84,7 +84,7 @@ const Devops = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Docker / Docker compose</h3>
                             {/* <span className='skills__level'>7</span> */}
@@ -104,7 +104,7 @@ const Devops = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Github / Bitbucket</h3>
                             {/* <span className='skills__level'>5</span> */}
@@ -124,7 +124,7 @@ const Devops = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Celery / Redis</h3>
                             {/* <span className='skills__level'>5</span> */}

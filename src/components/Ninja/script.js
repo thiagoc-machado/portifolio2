@@ -367,17 +367,17 @@ if (
 ) {
     if (window.innerWidth > window.innerHeight) {
         var platformHeight = 600;
-        console.log("Mobile mode deitado");
+        // console.log("Mobile mode deitado");
     } else {
         var platformHeight = 0;
-        console.log("Mobile mode de pé");
+        // console.log("Mobile mode de pé");
     }
 } else {
     var platformHeight = 400;
 }
 
-console.log("Width = " + window.innerWidth);
-console.log("Heigth = " + window.innerHeight);
+// console.log("Width = " + window.innerWidth);
+// console.log("Heigth = " + window.innerHeight);
 
 // The background moves slower than the hero
 const backgroundSpeedMultiplier = 0.2;
@@ -509,12 +509,12 @@ window.addEventListener("load", function () {
             addItem(name, value);
             savePlacarElement.style.display = "none";
             var listaJSON = JSON.stringify(listItems);
-            console.log(listaJSON);
+            // console.log(listaJSON);
             let req = new XMLHttpRequest();
 
             req.onreadystatechange = () => {
                 if (req.readyState == XMLHttpRequest.DONE) {
-                    console.log(req.responseText);
+                    // console.log(req.responseText);
                 }
             };
             req.open(

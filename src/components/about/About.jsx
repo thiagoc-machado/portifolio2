@@ -34,7 +34,7 @@ Let's connect and chat about Python, Django, Vue.js, and web development! 🚀
           <a download="" href={CV} className="button button-flex">
             Download CV
             <svg
-              class="button__icon"
+              className="button__icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"

@@ -12,7 +12,7 @@ const Frontend = () => {
           initial={{opacity: 0, y: -5 }}
           whileInView={{ opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.3 } }}
           >
-          <i class="uil uil-check"></i>
+          <i className="uil uil-check"></i>
             <div>
               <h3 className='skills__name'
               >JavaScript</h3>
@@ -23,7 +23,7 @@ const Frontend = () => {
           initial={{opacity: 0, y: -5 }}
           whileInView={{ opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.4 } }}
           >
-          <i class="uil uil-check"></i>
+          <i className="uil uil-check"></i>
             <div>
               <h3 className='skills__name'
               
@@ -35,7 +35,7 @@ const Frontend = () => {
           initial={{opacity: 0, y: -5 }}
           whileInView={{ opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.5 } }}
           >
-          <i class="uil uil-check"></i>
+          <i className="uil uil-check"></i>
             <div>
               <h3 className='skills__name'>Bootstrap</h3>
               {/* <span className='skills__level'>6</span> */}
@@ -48,7 +48,7 @@ const Frontend = () => {
           initial={{opacity: 0, y: -5 }}
           whileInView={{ opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.6 } }}
           >
-          <i class="uil uil-check"></i>
+          <i className="uil uil-check"></i>
             <div>
               <h3 className='skills__name'>VUE</h3>
               {/* <span className='skills__level'>9</span> */}
@@ -58,7 +58,7 @@ const Frontend = () => {
           initial={{opacity: 0, y: -5 }}
           whileInView={{ opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.7 } }}
           >
-          <i class="uil uil-check"></i>
+          <i className="uil uil-check"></i>
             <div>
               <h3 className='skills__name'>Tailwind</h3>
               {/* <span className='skills__level'>7</span> */}
@@ -68,7 +68,7 @@ const Frontend = () => {
           initial={{opacity: 0, y: -5 }}
           whileInView={{ opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.8 } }}
           >
-          <i class="uil uil-check"></i>
+          <i className="uil uil-check"></i>
             <div>
               <h3 className='skills__name'>Framer Motion</h3>
               {/* <span className='skills__level'>8</span> */}

@@ -21,7 +21,7 @@ const Others = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Google / microsoft oauth</h3>
                             {/* <span className='skills__level'>6</span> */}
@@ -41,7 +41,7 @@ const Others = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Python Scripts</h3>
                             {/* <span className='skills__level'>9</span> */}
@@ -61,7 +61,7 @@ const Others = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Postman / Insomnia</h3>
                             {/* <span className='skills__level'>8</span> */}
@@ -84,7 +84,7 @@ const Others = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">RESTful APIs</h3>
                             {/* <span className='skills__level'>7</span> */}
@@ -104,7 +104,7 @@ const Others = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Certbot</h3>
                             {/* <span className='skills__level'>5</span> */}
@@ -124,7 +124,7 @@ const Others = () => {
                             },
                         }}
                     >
-                        <i class="uil uil-check"></i>
+                        <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Bash Scripting</h3>
                             {/* <span className='skills__level'>5</span> */}

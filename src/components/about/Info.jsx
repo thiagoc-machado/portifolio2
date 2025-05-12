@@ -18,7 +18,7 @@ function Info() {
             },
           }}
         >
-          <i class="uil uil-graduation-cap"></i>
+          <i className="uil uil-graduation-cap"></i>
           <h3 className="about__title">University of Michigan</h3>
           <span className="about__subtitle">Python</span>
         </motion.div>
@@ -37,7 +37,7 @@ function Info() {
             },
           }}
         >
-          <i class="uil uil-graduation-cap"></i>
+          <i className="uil uil-graduation-cap"></i>
           <h3 className="about__title">Meta</h3>
           <span className="about__subtitle">Frontend</span>
         </motion.div>
@@ -56,7 +56,7 @@ function Info() {
             },
           }}
         >
-          <i class="uil uil-graduation-cap"></i>
+          <i className="uil uil-graduation-cap"></i>
           <h3 className="about__title">IBM</h3>
           <span className="about__subtitle">Fullstack</span>
         </motion.div>
