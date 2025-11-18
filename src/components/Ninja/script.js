@@ -6,7 +6,12 @@ let introductionElement,
     restartButton,
     gameoverElement,
     actionButton,
-    scoreElement;
+    scoreElement,
+    listElement,
+    formElement,
+    gameoverScoreElement;
+let listenersBound = false;
+let listItems = [];
 
 function resetGame(canvas) {
     startGame(canvas);
@@ -33,6 +38,8 @@ function startGame(canvas) {
         return;
     }
 
+    initOnce();
+
     phase = "waiting";
     lastTimestamp = undefined;
     sceneOffset = 0;
@@ -45,6 +52,9 @@ function startGame(canvas) {
     scoreElement = document.getElementById("score") ?? null;
     actionButton = document.getElementById("action") ?? null;
     gameoverElement = document.getElementById("gameover") ?? null;
+    listElement = document.getElementById("hiscore") ?? null;
+    formElement = document.getElementById("savename") ?? null;
+    gameoverScoreElement = document.getElementById("gameoverScore") ?? null;
 
     if (introductionElement) introductionElement.style.opacity = 1;
     if (savePlacarElement) savePlacarElement.style.display = "none";
@@ -398,7 +408,9 @@ const fallingSpeed = 2;
 const heroWidth = 17; // 24
 const heroHeight = 30; // 40
 
-window.addEventListener("load", function () {
+function initOnce() {
+    if (listenersBound) return;
+    listenersBound = true;
     canvas = document.getElementById("game");
     if (!canvas) {
         console.warn("Canvas não encontrado! Criando dinamicamente...");
@@ -445,8 +457,6 @@ window.addEventListener("load", function () {
         });
     }
 
-    resetGame(canvas); // Passe o canvas como argumento
-
     const gameoverScoreElement = document.getElementById("gameoverScore");
 
     var hallElement = {};
@@ -455,7 +465,6 @@ window.addEventListener("load", function () {
 
     const listElement = document.getElementById("hiscore");
     const formElement = document.getElementById("savename");
-    let listItems = [];
 
     function updateList(json) {
         const listElement = document.getElementById("hiscore");
@@ -480,7 +489,10 @@ window.addEventListener("load", function () {
         })
         .then(function (json) {
             updateList(json);
-        });
+        })
+        .catch((err) =>
+            console.error("Erro ao buscar hall da fama:", err)
+        );
 
     function addItem(name, value) {
         const newItem = document.createElement("li");
@@ -533,8 +545,6 @@ window.addEventListener("load", function () {
     } else {
         savename.addEventListener("submit", handleFormSubmit);
     }
-    resetGame(document.getElementById("game"));
-
     // If space was pressed restart the game
     // window.addEventListener("keydown", function (event) {
     // if (event.key == " ") {
@@ -685,7 +695,7 @@ window.addEventListener("load", function () {
                     restartButton.style.display = "block";
                     gameoverElement.style.display = "block";
                     actionButton.style.display = "none";
-                    if (score > listItems[9].value) {
+                    if (listItems.length > 9 && score > listItems[9].value) {
                         savePlacarElement.style.display = "block";
                     }
                     return;
@@ -730,13 +740,17 @@ window.addEventListener("load", function () {
         return [platformTheStickHits, false];
     }
 
-    restartButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        resetGame(document.getElementById("game"));
+    if (restartButton) {
+        restartButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            resetGame(document.getElementById("game"));
 
-        gameoverElement.style.display = "none";
-        actionButton.style.display = "block";
-        restartButton.style.display = "none";
-    });
-});
-export { startGame };
+            gameoverElement.style.display = "none";
+            actionButton.style.display = "block";
+            restartButton.style.display = "none";
+        });
+    }
+}
+
+window.addEventListener("load", initOnce);
+export { startGame, initOnce };

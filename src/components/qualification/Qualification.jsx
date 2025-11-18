@@ -492,6 +492,83 @@ const Qualification = () => {
                                 }}
                             >
                                 <h3 className="qualification__title">
+                                    GHENOVA Digital
+                                </h3>
+                                <span className="qualification__subtitle">
+                                    Back End Developer<br></br>06/2025 -
+                                    Present · Full-time · Spain · Remote
+                                </span>
+                                <span className="qualification__subtitle">
+                                    Development and maintenance of Django and
+                                    FastAPI services, integrating with
+                                    geographic systems and data analytics, and
+                                    handling data storage plus async workloads.
+                                    Stack: Django, FastAPI, Celery, Redis,
+                                    Airflow, MinIO, Martin, PostgreSQL/PostGIS,
+                                    Grafana, Prometheus, Loki, etc.
+                                </span>
+                            </motion.div>
+                        </div>
+
+                        <div className="qualification__data">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                        type: "spring",
+                                        stiffness: 100,
+                                        duration: 0.5,
+                                        delay: 0.2,
+                                    },
+                                }}
+                            >
+                                <h3 className="qualification__title">
+                                    Voyc AI
+                                </h3>
+                                <span className="qualification__subtitle">
+                                    Back End Developer<br></br>04/2025 -
+                                    06/2025 · Full-time · South Africa · Remote · contract
+                                </span>
+                                <span className="qualification__subtitle">
+                                    Built a Django/DRF backend that streamed
+                                    live call audio from the frontend to a
+                                    speech-recognition service, received
+                                    transcripts, processed keywords and alerts,
+                                    and stored metrics in PostgreSQL via
+                                    WebSockets. Stack: Django, DRF, PostgreSQL,
+                                    WebSockets, and related services.
+                                </span>
+                            </motion.div>
+                            <div>
+                                <span className="qualification__rounder"></span>
+                                <span className="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div className="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span className="qualification__rounder"></span>
+                                <span className="qualification__line"></span>
+                            </div>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                        type: "spring",
+                                        stiffness: 100,
+                                        duration: 0.5,
+                                        delay: 0.2,
+                                    },
+                                }}
+                            >
+                                <h3 className="qualification__title">
                                     Aidea Legal - Grupo Planeta
                                 </h3>
                                 <span className="qualification__subtitle">

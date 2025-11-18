@@ -1,9 +1,31 @@
 import React, { useState } from 'react';
 import './services.css';
 import { motion } from 'framer-motion';
+import magisHero from '../../assets/magismenu/tablet.png';
+import magisMobileMenu from '../../assets/magismenu/mobile_menu.png';
+import magisMobile from '../../assets/magismenu/mobile.png';
+import magisKitchen from '../../assets/magismenu/kitchen_kds.png';
+import magisStatus from '../../assets/magismenu/status_tv.png';
+import magisAdmin from '../../assets/magismenu/admin_dashboard.png';
+import magisWaiter from '../../assets/magismenu/waiter_tablet.png';
+import magisTotem from '../../assets/magismenu/totem.png';
 
 const Services = () => {
   const [toggleState, setToggleState] = useState(0);
+  const [magisSlide, setMagisSlide] = useState(0);
+  const magisImages = [
+    magisMobileMenu,
+    magisMobile,
+    magisKitchen,
+    magisStatus,
+    magisAdmin,
+    magisWaiter,
+    magisTotem,
+  ];
+  const nextMagis = () =>
+    setMagisSlide((prev) => (prev + 1) % magisImages.length);
+  const prevMagis = () =>
+    setMagisSlide((prev) => (prev - 1 + magisImages.length) % magisImages.length);
   const toggleTab = (index) => {
     setToggleState(index);
   };
@@ -15,6 +37,184 @@ const Services = () => {
       </span>
 
       <div className='services__container container grid'>
+        <div className='services__featured-wrap'>
+          <div className='services__featured-grid'>
+            <motion.div
+              className='services__content services__card-featured services__card0'
+              style={{
+                '--featured-bg': `url(${magisHero})`,
+              }}
+              initial={{ opacity: 0, y: -8, x: -8 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.05 },
+              }}
+              onClick={() => toggleTab(10)}
+            >
+              <div>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  MagisMenu
+                  <br />
+                  Customer & QR ordering
+                </h3>
+              </div>
+              <span className='services__button'>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </motion.div>
+            <motion.div
+              className='services__content services__card-featured services__card0'
+              style={{
+                '--featured-bg': `url(${magisKitchen})`,
+              }}
+              initial={{ opacity: 0, y: -8, x: 0 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 },
+              }}
+              onClick={() => toggleTab(10)}
+            >
+              <div>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  MagisMenu
+                  <br />
+                  Kitchen & KDS
+                </h3>
+              </div>
+              <span className='services__button'>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </motion.div>
+            <motion.div
+              className='services__content services__card-featured services__card0'
+              style={{
+                '--featured-bg': `url(${magisStatus})`,
+              }}
+              initial={{ opacity: 0, y: -8, x: 8 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.15 },
+              }}
+              onClick={() => toggleTab(10)}
+            >
+              <div>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  MagisMenu
+                  <br />
+                  Status/TV boards
+                </h3>
+              </div>
+              <span className='services__button'>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </motion.div>
+          </div>
+          <div
+            className={
+              toggleState === 10
+                ? 'services__modal active-modal'
+                : 'services__modal'
+            }
+          >
+            <div className='services__modal-content services__modal-content-wide'>
+              <i
+                onClick={() => toggleTab(0)}
+                className='uil uil-times services__modal-close'
+              ></i>
+              <h3 className='services__modal-title'>MagisMenu</h3>
+              <p className='services__modal-description'>
+                Multi-tenant, multi-screen restaurant control app with admin,
+                waiter/tablet, kiosk/self-service, status/TV, kitchen/KDS, and
+                customer ordering via QR code on the table. Stack: Django, DRF,
+                PostgreSQL, WebSocket, Dolphin, Nginx, Redis, Docker on the
+                backend and Vue on the frontend; deployed on AWS (EC2, RDS, S3).
+              </p>
+              <div className='services__carousel'>
+                <img
+                  src={magisImages[magisSlide]}
+                  alt='MagisMenu screen'
+                  className='services__carousel-img'
+                />
+                <div className='services__carousel-controls'>
+                  <button onClick={prevMagis} aria-label='Previous image'>
+                    ‹
+                  </button>
+                  <span>
+                    {magisSlide + 1}/{magisImages.length}
+                  </span>
+                  <button onClick={nextMagis} aria-label='Next image'>
+                    ›
+                  </button>
+                </div>
+              </div>
+              <ul className='services__modal-services grid'>
+                <li className='services__modal-service'>
+                  <i className='uil uil-globe services__modal-icon'></i>
+                  <p className='services__modal-info'>
+                    <a
+                      href='https://magismenus.com'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='services__modal-link'
+                    >
+                      magismenus.com
+                    </a>{" "}
+                    /{" "}
+                    <a
+                      href='https://magismenu.es'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='services__modal-link'
+                    >
+                      magismenu.es
+                    </a>
+                  </p>
+                </li>
+                <li className='services__modal-service'>
+                  <i className='uil uil-check-circle services__modal-icon'></i>
+                  <p className='services__modal-info'>
+                    Customer/table: filterable catalog, cart, item options,
+                    multi-language, and per-table QR ordering.
+                  </p>
+                </li>
+                <li className='services__modal-service'>
+                  <i className='uil uil-check-circle services__modal-icon'></i>
+                  <p className='services__modal-info'>
+                    Operations: waiter/tablet and kiosks/self-service to place
+                    orders with real-time tracking.
+                  </p>
+                </li>
+                <li className='services__modal-service'>
+                  <i className='uil uil-check-circle services__modal-icon'></i>
+                  <p className='services__modal-info'>
+                    Kitchen/KDS and status/TV boards for customers with
+                    states (pending, in preparation, ready) via WebSocket.
+                  </p>
+                </li>
+                <li className='services__modal-service'>
+                  <i className='uil uil-check-circle services__modal-icon'></i>
+                  <p className='services__modal-info'>
+                    Multi-tenant admin: menu, promotions, tables, users,
+                    auditing; containerized deploy (Nginx+Docker) on AWS (EC2,
+                    RDS, S3) with Redis for queues.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <motion.div className='services__content  services__card1'
         initial={{opacity: 0, y: -5, x: -5 }}
         whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
