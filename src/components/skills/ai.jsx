@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Ai = () => {
     return (
         <div className="skills__content">
-            <h3 className="skills__title">Ai</h3>
+            <h3 className="skills__title">AI / ML</h3>
             <div className="skills__box">
                 <div className="skills__group">
                     <motion.div
@@ -87,7 +87,6 @@ const Ai = () => {
                         <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">TensorFlow</h3>
-                            {/* <span className='skills__level'>7</span> */}
                         </div>
                     </motion.div>
                     <motion.div
@@ -104,10 +103,9 @@ const Ai = () => {
                             },
                         }}
                     >
-                        {/* <i className="uil uil-check"></i> */}
+                        <i className="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name"></h3>
-                            {/* <span className='skills__level'>5</span> */}
+                            <h3 className="skills__name">Hugging Face</h3>
                         </div>
                     </motion.div>
                     <motion.div
@@ -124,10 +122,9 @@ const Ai = () => {
                             },
                         }}
                     >
-                        {/* <i className="uil uil-check"></i> */}
+                        <i className="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name"></h3>
-                            {/* <span className='skills__level'>5</span> */}
+                            <h3 className="skills__name">LangChain / RAG</h3>
                         </div>
                     </motion.div>
                 </div>

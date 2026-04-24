@@ -15,24 +15,30 @@
 .qualification__button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
-  color: var(--title-color);
+  color: rgba(255, 255, 255, 0.82);
   margin: 0 var(--mb-1);
   cursor: pointer;
-  background-color: rgb(126, 126, 126);
-  border-radius: 10px;
-  padding: 5px
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 42%),
+    linear-gradient(135deg, rgba(22, 22, 24, 0.96), rgba(33, 33, 38, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
 .qualification__button:hover {
-  background-color: rgb(221, 221, 221);
-  color: rgb(0, 0, 0);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 42%),
+    linear-gradient(135deg, rgba(34, 34, 39, 0.98), rgba(48, 48, 54, 0.98));
+  color: var(--title-color);
 }
 .qualification__icon {
   font-size: 1.8rem;
   margin-right: var(--mb-0-25);
 }
 .qualification__active {
-  color: rgb(0, 0, 0);
-  background-color: rgb(221, 221, 221);
+  color: #111111;
+  background: var(--title-color);
 }
 .qualification__sections {
   display: grid;
@@ -42,9 +48,13 @@
 }
 .qualification__content {
   display: none;
-  padding: 10px;
-  border-radius: 15px;
-  background-color: var(--container-color);
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 35%),
+    linear-gradient(135deg, rgba(18, 18, 20, 0.92), rgba(28, 28, 32, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
 }
 .qualification__content-active {
   display: block;
@@ -57,11 +67,13 @@
 .qualification__title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  color: var(--title-color);
 }
 .qualification__subtitle {
   display: inline-block;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
+  color: rgba(255, 255, 255, 0.72);
 }
 .qualification__calendar {
   font-size: var(--small-font-size);
@@ -70,14 +82,14 @@
   display: inline-block;
   width: 13px;
   height: 13px;
-  background-color: var(--text-color);
+  background-color: var(--first-color);
   border-radius: 50%;
 }
 .qualification__line {
   display: block;
   width: 1px;
   height: 100%;
-  background-color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.18);
   transform: translate(6px, -7px);
 }
 

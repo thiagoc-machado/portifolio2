@@ -1,6 +1,8 @@
 .footer {
-  background-color: var(--container-color);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 35%),
+    linear-gradient(135deg, rgba(18, 18, 20, 0.96), rgba(12, 12, 14, 0.98));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 .footer__container {
   padding: 2rem 0 6rem;
@@ -11,10 +13,9 @@
 }
 .footer__title {
   text-align: center;
-  /* margin-bottom: var(--mb-2); */
 }
 .footer__link:hover {
-  color: var(--title-color-black);
+  color: rgba(255, 255, 255, 0.7);
 }
 .footer__list {
   display: flex;
@@ -28,22 +29,22 @@
   column-gap: 1.25rem;
 }
 .footer__social-link {
-  background-color: var(--title-color);
-  color: var(--container-color);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--title-color);
   font-size: 1.125rem;
   padding: 0.4rem;
   border-radius: 0.5rem;
   display: inline-flex;
   transition: 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer__social-link:hover {
-  background-color: var(--button--hover);
+  background-color: rgba(255, 255, 255, 0.14);
   transition: 0.2s;
 }
 .footer__copy {
   display: block;
-  /* margin-top: 4.5rem; */
   color: var(--title-color);
   text-align: center;
   font-size: var(--smaller-font-size);

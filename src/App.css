@@ -101,6 +101,11 @@ textarea {
 
 body {
   background-color: var(--body-color);
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 28%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.035), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent 18%);
+  background-attachment: fixed;
   color: var(--text-color);
 }
 
@@ -144,6 +149,9 @@ img {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .section__title,
@@ -172,6 +180,7 @@ img {
   border-radius: 1rem;
   font-weight: var(--font-medium);
   transition: 0.2s;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
 .button:hover {

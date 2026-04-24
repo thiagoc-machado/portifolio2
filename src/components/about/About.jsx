@@ -27,9 +27,15 @@ function About() {
             whileInView={{ opacity: 1, z: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Hey! 👋 I'm a Full-Stack Developer with a focus on Django and Vue.js. I work equally on backend and frontend, using tools like Docker, Nginx, PostgreSQL, and AWS (S3, EC2, RDS).<br></br>
-I'm always learning, with expertise in Django, Vue, React, AWS, and Databases.<br></br>
-Let's connect and chat about Python, Django, Vue.js, and web development! 🚀
+            I build production-focused web applications with a backend-first
+            mindset, mainly using Django, FastAPI, Vue.js, and React. My day to
+            day work combines API design, data modeling, async processing,
+            deployment, and observability, with Docker, Nginx, PostgreSQL, and
+            AWS behind the scenes.<br></br>
+            I enjoy working on systems that need to be reliable, maintainable,
+            and ready to scale as the product grows.<br></br>
+            If you want to talk about Python, backend architecture, or
+            full-stack delivery, I am always open to it.
           </motion.p>
           <a download="" href={CV} className="button button-flex">
             Download CV

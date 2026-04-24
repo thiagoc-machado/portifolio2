@@ -21,7 +21,7 @@ const Header = () => {
         animate={{ opacity: 1, position: "relative", top: "0px" }}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
-        <a href="index.html" className="nav__logo">
+        <a href="#home" className="nav__logo">
           Thiago Machado
         </a>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
@@ -64,9 +64,9 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#qualification"
-                onClick={() => setActiveNav("#portfolio")}
+                onClick={() => setActiveNav("#qualification")}
                 className={
-                  activeNav === "#portfolio"
+                  activeNav === "#qualification"
                     ? "nav__link active-link"
                     : "nav__link"
                 }

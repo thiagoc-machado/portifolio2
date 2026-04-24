@@ -1,34 +1,51 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import "./contact.css";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState("");
   const form = useRef();
+  const contactEndpoint =
+    process.env.REACT_APP_CONTACT_ENDPOINT ||
+    "/.netlify/functions/send-contact";
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    setIsLoading(true); // começar a mostrar o spinner
+    setIsLoading(true);
+    setStatus("");
 
-    emailjs
-      .sendForm(
-        "service_ey4oxzo",
-        "template_xbuhk1b",
-        form.current,
-        "3PaqMmy4pZ6WPjmFa"
-      )
-      .then((result) => {
-        alert("Message sent successfully");
-        e.target.reset();
-        setIsLoading(false); // esconder o spinner
-      })
-      .catch((error) => {
-        alert("An error has occurred. Please try again later.");
-        setIsLoading(false); // esconder o spinner
+    const formData = new FormData(form.current);
+    const payload = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch(contactEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data?.message || "Unable to send message.");
+      }
+
+      e.target.reset();
+      setStatus("Message sent successfully.");
+    } catch (error) {
+      setStatus(
+        error instanceof Error
+          ? error.message
+          : "An error has occurred. Please try again later."
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
+
   return (
     <section className="contact section" id="contact">
       <h2 className="section__title ">Get in touch</h2>
@@ -100,15 +117,17 @@ const Contact = () => {
                 name="name"
                 className="contact__form-input"
                 placeholder="Insert your name"
+                required
               />
             </div>
             <div className="contact__form-div">
               <label className="contact__form-tag">Mail</label>
               <input
-                type="text"
+                type="email"
                 name="email"
                 className="contact__form-input"
                 placeholder="Insert your email"
+                required
               />
             </div>
             <div className="contact__form-div contact__form-area">
@@ -119,10 +138,11 @@ const Contact = () => {
                 cols="30"
                 rows="10"
                 placeholder="Write your message"
+                required
               ></textarea>
             </div>
 
-            <button className="button button--flex">
+            <button className="button button--flex" disabled={isLoading}>
               {isLoading ? (
                 <>
                   <span className="spinner"></span>- Sending...
@@ -148,6 +168,7 @@ const Contact = () => {
                 ></path>
               </svg>
             </button>
+            {status ? <p className="contact__status">{status}</p> : null}
           </form>
         </div>
       </div>

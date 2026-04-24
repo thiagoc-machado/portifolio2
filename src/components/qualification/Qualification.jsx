@@ -10,7 +10,9 @@ const Qualification = () => {
     return (
         <section className="qualification section" id="qualification">
             <h2 className="section__title">Qualifications</h2>
-            <span className="section__subtitle">My personal journey</span>
+            <span className="section__subtitle">
+                Selected certifications and experience
+            </span>
 
             <div className="qualification__container container">
                 <div className="qualification__tabs">
@@ -72,7 +74,7 @@ const Qualification = () => {
                                     IBM AI Engineering Professional Certificate
                                 </h3>
                                 <span className="qualification__subtitle">
-                                    IBM Networks - 2025
+                                    IBM Skills Network - 2025
                                 </span>
                                 <div>
                                     <span className="qualification__title"></span>
@@ -99,6 +101,7 @@ const Qualification = () => {
                                         <a
                                             href="https://www.coursera.org/account/accomplishments/specialization/certificate/R3V4WZAZA2BY"
                                             target="_blank"
+                                            rel="noreferrer"
                                         >
                                             View certificate
                                         </a>
@@ -137,12 +140,13 @@ const Qualification = () => {
                                     using Kubernetes and Red Hat OpenShift. The
                                     program included practical, hands-on
                                     projects and emphasized real-world
-                                    application of cloud-native technologies..
+                                    application of cloud-native technologies.
                                 </span>
                                 <span className="qualification__subtitle">
                                     <a
                                         href="https://coursera.org/share/5bbedf913fe6c6ee32f3ca7b60daa3a4"
                                         target="_blank"
+                                        rel="noreferrer"
                                     >
                                         View certificate
                                     </a>
@@ -199,6 +203,7 @@ const Qualification = () => {
                                         <a
                                             href="https://www.coursera.org/account/accomplishments/specialization/certificate/4YQB2464LZG5"
                                             target="_blank"
+                                            rel="noreferrer"
                                         >
                                             View certificate
                                         </a>
@@ -238,6 +243,7 @@ const Qualification = () => {
                                     <a
                                         href="https://www.coursera.org/account/accomplishments/specialization/certificate/B5UECRHYKRLP"
                                         target="_blank"
+                                        rel="noreferrer"
                                     >
                                         View certificate
                                     </a>
@@ -286,6 +292,7 @@ const Qualification = () => {
                                     <a
                                         href="https://www.coursera.org/account/accomplishments/specialization/certificate/5EJK9ET78ZXR"
                                         target="_blank"
+                                        rel="noreferrer"
                                     >
                                         View certificate
                                     </a>
@@ -320,6 +327,7 @@ const Qualification = () => {
                                     <a
                                         href="https://www.coursera.org/account/accomplishments/certificate/VYAQDA5J67DH"
                                         target="_blank"
+                                        rel="noreferrer"
                                     >
                                         View certificate
                                     </a>
@@ -367,6 +375,7 @@ const Qualification = () => {
                                     <a
                                         href="https://www.coursera.org/account/accomplishments/certificate/VLWKGM44GB28"
                                         target="_blank"
+                                        rel="noreferrer"
                                     >
                                         View certificate
                                     </a>
@@ -402,6 +411,7 @@ const Qualification = () => {
                                     <a
                                         href="https://www.coursera.org/account/accomplishments/certificate/RATTNRJU6Y2W"
                                         target="_blank"
+                                        rel="noreferrer"
                                     >
                                         View certificate
                                     </a>
@@ -434,21 +444,22 @@ const Qualification = () => {
                                 }}
                             >
                                 <h3 className="qualification__title">
-                                    English Leve: C1
+                                    English Level: C1
                                 </h3>
                                 <span className="qualification__subtitle">
                                     {" "}
-                                    EF SET Certifcate
+                                    EF SET Certificate
                                 </span>
                                 <br></br>
                                 <a
                                     href="https://www.efset.org/cert/TeY1XU?cid=em100a"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     View certificate
                                 </a>
                                 <h3 className="qualification__title">
-                                    Spanish Leve: C2
+                                    Spanish Level: C2
                                 </h3>
                                 <span className="qualification__subtitle">
                                     {" "}
@@ -495,17 +506,26 @@ const Qualification = () => {
                                     GHENOVA Digital
                                 </h3>
                                 <span className="qualification__subtitle">
-                                    Back End Developer<br></br>06/2025 -
-                                    Present · Full-time · Spain · Remote
+                                    Backend Developer - Geospatial & Data
+                                    Platforms<br></br>06/2025 - Present ·
+                                    Full-time · Spain · Remote
                                 </span>
                                 <span className="qualification__subtitle">
-                                    Development and maintenance of Django and
-                                    FastAPI services, integrating with
-                                    geographic systems and data analytics, and
-                                    handling data storage plus async workloads.
+                                    Responsible for designing and delivering the
+                                    project&apos;s data lake architecture using
+                                    Django, PostgreSQL/PostGIS, MinIO, Keycloak,
+                                    and Airflow. I built scheduled data
+                                    pipelines, database tables and SQL models,
+                                    Data Wrapper integrations, and complex APIs
+                                    for spatial data workflows, while keeping the
+                                    platform reliable, observable, and easy to
+                                    evolve.
+                                </span>
+                                <span className="qualification__subtitle">
                                     Stack: Django, FastAPI, Celery, Redis,
                                     Airflow, MinIO, Martin, PostgreSQL/PostGIS,
-                                    Grafana, Prometheus, Loki, etc.
+                                    Keycloak, Azure DevOps, Grafana, Prometheus,
+                                    and Loki.
                                 </span>
                             </motion.div>
                         </div>
@@ -528,17 +548,18 @@ const Qualification = () => {
                                     Voyc AI
                                 </h3>
                                 <span className="qualification__subtitle">
-                                    Back End Developer<br></br>04/2025 -
-                                    06/2025 · Full-time · South Africa · Remote · contract
+                                    Backend Developer<br></br>04/2025 -
+                                    06/2025 · Full-time · South Africa · Remote ·
+                                    contract
                                 </span>
                                 <span className="qualification__subtitle">
                                     Built a Django/DRF backend that streamed
-                                    live call audio from the frontend to a
-                                    speech-recognition service, received
-                                    transcripts, processed keywords and alerts,
-                                    and stored metrics in PostgreSQL via
-                                    WebSockets. Stack: Django, DRF, PostgreSQL,
-                                    WebSockets, and related services.
+                                    live call audio to a speech-recognition
+                                    service, processed transcripts and alerts
+                                    in real time, and stored operational metrics
+                                    in PostgreSQL through WebSockets. The work
+                                    centered on reliable data flow and
+                                    low-latency event handling.
                                 </span>
                             </motion.div>
                             <div>
@@ -576,21 +597,18 @@ const Qualification = () => {
                                     03/2025
                                 </span>
                                 <span className="qualification__subtitle">
-                                    Development of a legal automation system
-                                    using Django Rest Framework (DRF), Vue.js,
-                                    Vuex, and PostgreSQL, hosted on AWS with S3
-                                    for file storage, EC2 for deployment, and
-                                    RDS for databases. Utilized Nginx for
-                                    reverse proxy and Docker for
-                                    containerization. Worked equally on backend
-                                    and frontend development, including API
-                                    integration, authentication systems, and
-                                    data management. Implemented RESTful
-                                    services and optimized performance using
-                                    caching and indexing techniques
+                                    Built a legal automation platform with
+                                    Django Rest Framework, Vue.js, Vuex, and
+                                    PostgreSQL, deployed on AWS with S3, EC2,
+                                    and RDS. I worked across backend and
+                                    frontend, delivering API integrations,
+                                    authentication flows, file handling, and
+                                    performance improvements through caching and
+                                    indexing.
                                 </span>
                             </motion.div>
                         </div>
+
                         <div className="qualification__data">
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
@@ -606,26 +624,19 @@ const Qualification = () => {
                                 }}
                             >
                                 <h3 className="qualification__title">
-                                    Freelancer
+                                    Stocken Capital
                                 </h3>
                                 <span className="qualification__subtitle">
-                                    FullStack Developer<br></br>10/2022 -
-                                    Present
+                                    Backend Developer<br></br>05/2023 - 01/2024
                                 </span>
                                 <span className="qualification__subtitle">
-                                    I have undertaken various projects on
-                                    platforms like Fiverr and Freelancer.com,
-                                    specializing in web applications utilizing
-                                    Django, React, and Python. One of my most
-                                    notable projects was a comprehensive
-                                    application developed for a Brazilian
-                                    municipality. This application was crafted
-                                    to register candidates and issue bank
-                                    payment slips for public service exam
-                                    registration, entirely built using Django.
-                                    Through these endeavors, I gained extensive
-                                    knowledge and honed my expertise in these
-                                    key technologies.
+                                    Owned the Django backend for a legaltech SaaS
+                                    platform focused on corporate governance and
+                                    capital management. The role included
+                                    refactoring legacy code, shipping new APIs,
+                                    integrating blockchain data flows, and
+                                    supporting payment and financial operations
+                                    with Docker and Amazon EC2.
                                 </span>
                             </motion.div>
                             <div>
@@ -655,27 +666,21 @@ const Qualification = () => {
                                     },
                                 }}
                             >
-                                <h3 className="qualification__title">
-                                    Stocken Capital
-                                </h3>
+                                <h3 className="qualification__title">Idatis</h3>
                                 <span className="qualification__subtitle">
-                                    Backend Developer<br></br>05/2023 - 01/2024
+                                    FrontEnd Developer<br></br>01/2023 - 05/2023
                                 </span>
                                 <span className="qualification__subtitle">
-                                    The company offers a customized legaltech
-                                    SaaS tool designed to enable businesses to
-                                    digitize their corporate governance and
-                                    capital. Within this organization, the role
-                                    involves overseeing the entire Django
-                                    backend. This includes refactoring existing
-                                    code, introducing new features and APIs,
-                                    integrating blockchain data transfers,
-                                    managing payments and financial transactions
-                                    on the platform, and utilizing technologies
-                                    such as Docker, Amazon EC2, etc.
+                                    Volunteer frontend work focused on shipping
+                                    new features and improving the product
+                                    experience with React. The project helped
+                                    turn ideas and designs into working MVPs with
+                                    social impact, strengthening my view of how
+                                    frontend work supports real product delivery.
                                 </span>
                             </motion.div>
                         </div>
+
 
                         <div className="qualification__data">
                             <motion.div
@@ -691,24 +696,21 @@ const Qualification = () => {
                                     },
                                 }}
                             >
-                                <h3 className="qualification__title">Idatis</h3>
+                                <h3 className="qualification__title">
+                                    Freelancer
+                                </h3>
                                 <span className="qualification__subtitle">
-                                    FrontEnd Developer<br></br>01/2023 - 05/2023
+                                    FullStack Developer<br></br>10/2021 -
+                                    Present
                                 </span>
                                 <span className="qualification__subtitle">
-                                    During my volunteer work at Idatis, I
-                                    collaborated closely with the frontend team,
-                                    primarily utilizing REACT to introduce new
-                                    features and enhancements to the platform.
-                                    The core mission of Idatis is to expedite
-                                    projects, starting from a mere idea or
-                                    design, and assist in transforming that
-                                    concept into a minimum viable product with a
-                                    social impact. This experience not only
-                                    allowed me to hone my skills in contemporary
-                                    web technologies but also broadened my
-                                    understanding of creating value-driven
-                                    digital solutions.
+                                    Delivered freelance web applications across
+                                    Django, React, and Python for clients on
+                                    platforms such as Fiverr and Freelancer.com.
+                                    One of the most notable projects was a
+                                    municipal exam registration system that
+                                    handled candidate intake and payment slip
+                                    generation entirely in Django.
                                 </span>
                             </motion.div>
                             <div>

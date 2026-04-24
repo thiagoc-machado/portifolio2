@@ -9,6 +9,12 @@ import magisStatus from '../../assets/magismenu/status_tv.png';
 import magisAdmin from '../../assets/magismenu/admin_dashboard.png';
 import magisWaiter from '../../assets/magismenu/waiter_tablet.png';
 import magisTotem from '../../assets/magismenu/totem.png';
+import work1 from '../../assets/work1.jpg';
+import work2 from '../../assets/work2.jpg';
+import work3 from '../../assets/work3.jpg';
+import work4 from '../../assets/work4.jpg';
+import work5 from '../../assets/work5.jpg';
+import work6 from '../../assets/work6.jpg';
 
 const Services = () => {
   const [toggleState, setToggleState] = useState(0);
@@ -29,98 +35,73 @@ const Services = () => {
   const toggleTab = (index) => {
     setToggleState(index);
   };
-  return (
+    return (
     <section className='services section' id='services'>
       <h2 className='section__title'>Projects</h2>
       <span className='section__subtitle'>
-        Take a look at what I'm working on
+        Selected work with the strongest production impact, led by MagisMenu
+        and live at magismenus.com / magismenu.es
       </span>
 
       <div className='services__container container grid'>
         <div className='services__featured-wrap'>
-          <div className='services__featured-grid'>
-            <motion.div
-              className='services__content services__card-featured services__card0'
-              style={{
-                '--featured-bg': `url(${magisHero})`,
-              }}
-              initial={{ opacity: 0, y: -8, x: -8 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                x: 0,
-                transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.05 },
-              }}
-              onClick={() => toggleTab(10)}
-            >
-              <div>
-                <i className='uil uil-web-grid services__icon'></i>
-                <h3 className='services__title'>
-                  MagisMenu
-                  <br />
-                  Customer & QR ordering
-                </h3>
+          <motion.div
+            className='services__featured-card'
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: 'spring',
+                stiffness: 90,
+                duration: 0.6,
+              },
+            }}
+          >
+            <div className='services__featured-copy'>
+              <p className='services__featured-kicker'>Flagship product</p>
+              <h3 className='services__featured-title'>MagisMenu</h3>
+              <p className='services__featured-description'>
+                Multi-tenant restaurant platform live at magismenus.com and
+                magismenu.es, built to connect customer ordering, operations,
+                kitchen workflows, and management in a single product.
+              </p>
+              <div className='services__featured-tags'>
+                <span>QR ordering</span>
+                <span>Kitchen / KDS</span>
+                <span>Admin & analytics</span>
               </div>
-              <span className='services__button'>
-                View more
-                <i className='uil uil-arrow-right services__button-icon'></i>
-              </span>
-            </motion.div>
-            <motion.div
-              className='services__content services__card-featured services__card0'
-              style={{
-                '--featured-bg': `url(${magisKitchen})`,
-              }}
-              initial={{ opacity: 0, y: -8, x: 0 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                x: 0,
-                transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 },
-              }}
-              onClick={() => toggleTab(10)}
-            >
-              <div>
-                <i className='uil uil-web-grid services__icon'></i>
-                <h3 className='services__title'>
-                  MagisMenu
-                  <br />
-                  Kitchen & KDS
-                </h3>
+              <div className='services__featured-actions'>
+                <button
+                  className='services__button services__button-primary'
+                  onClick={() => toggleTab(10)}
+                >
+                  Explore case study
+                  <i className='uil uil-arrow-right services__button-icon'></i>
+                </button>
+                <a
+                  href='https://magismenus.com'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='services__featured-link'
+                >
+                  Open live site
+                </a>
               </div>
-              <span className='services__button'>
-                View more
-                <i className='uil uil-arrow-right services__button-icon'></i>
-              </span>
-            </motion.div>
-            <motion.div
-              className='services__content services__card-featured services__card0'
-              style={{
-                '--featured-bg': `url(${magisStatus})`,
-              }}
-              initial={{ opacity: 0, y: -8, x: 8 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                x: 0,
-                transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.15 },
-              }}
-              onClick={() => toggleTab(10)}
-            >
-              <div>
-                <i className='uil uil-web-grid services__icon'></i>
-                <h3 className='services__title'>
-                  MagisMenu
-                  <br />
-                  Status/TV boards
-                </h3>
+            </div>
+            <div className='services__featured-visual'>
+              <img
+                src={magisHero}
+                alt='MagisMenu overview'
+                className='services__featured-image'
+              />
+              <div className='services__featured-metrics'>
+                <span>Multi-screen platform</span>
+                <span>Production deployed</span>
+                <span>AWS + Docker + Vue</span>
               </div>
-              <span className='services__button'>
-                View more
-                <i className='uil uil-arrow-right services__button-icon'></i>
-              </span>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
           <div
             className={
               toggleState === 10
@@ -135,11 +116,16 @@ const Services = () => {
               ></i>
               <h3 className='services__modal-title'>MagisMenu</h3>
               <p className='services__modal-description'>
-                Multi-tenant, multi-screen restaurant control app with admin,
-                waiter/tablet, kiosk/self-service, status/TV, kitchen/KDS, and
-                customer ordering via QR code on the table. Stack: Django, DRF,
-                PostgreSQL, WebSocket, Dolphin, Nginx, Redis, Docker on the
-                backend and Vue on the frontend; deployed on AWS (EC2, RDS, S3).
+                MagisMenu is the flagship product in my portfolio, live at
+                magismenus.com and magismenu.es. It is a multi-tenant
+                restaurant platform built to connect customers, waiters,
+                kitchens, kiosks, and management in one system. The product
+                supports QR ordering at the table, real-time order tracking,
+                status screens, kitchen/KDS workflows, and a centralized admin
+                layer for menus, tables, users, and promotions. I helped
+                shape the backend and frontend experience with Django, DRF,
+                PostgreSQL, WebSockets, Redis, Docker, and Vue, and the system
+                has been deployed on AWS for production use.
               </p>
               <div className='services__carousel'>
                 <img
@@ -185,52 +171,70 @@ const Services = () => {
                 <li className='services__modal-service'>
                   <i className='uil uil-check-circle services__modal-icon'></i>
                   <p className='services__modal-info'>
-                    Customer/table: filterable catalog, cart, item options,
-                    multi-language, and per-table QR ordering.
+                    Customer-facing flow: catalog, cart, item customization,
+                    multi-language support, and QR ordering per table.
                   </p>
                 </li>
                 <li className='services__modal-service'>
                   <i className='uil uil-check-circle services__modal-icon'></i>
                   <p className='services__modal-info'>
-                    Operations: waiter/tablet and kiosks/self-service to place
-                    orders with real-time tracking.
+                    Operations layer: waiter/tablet and kiosk screens designed
+                    to keep order flow fast and consistent.
                   </p>
                 </li>
                 <li className='services__modal-service'>
                   <i className='uil uil-check-circle services__modal-icon'></i>
                   <p className='services__modal-info'>
-                    Kitchen/KDS and status/TV boards for customers with
-                    states (pending, in preparation, ready) via WebSocket.
+                    Kitchen and status screens with live order states delivered
+                    through WebSockets.
                   </p>
                 </li>
                 <li className='services__modal-service'>
                   <i className='uil uil-check-circle services__modal-icon'></i>
                   <p className='services__modal-info'>
-                    Multi-tenant admin: menu, promotions, tables, users,
-                    auditing; containerized deploy (Nginx+Docker) on AWS (EC2,
-                    RDS, S3) with Redis for queues.
+                    Multi-tenant admin for menus, promotions, tables, users,
+                    and auditing, deployed with Docker and Nginx on AWS.
                   </p>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <motion.div className='services__content  services__card1'
-        initial={{opacity: 0, y: -5, x: -5 }}
-        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        <motion.div
+          className='services__content services__card-secondary services__card1'
+          initial={{ opacity: 0, y: -5, x: -5 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            x: 0,
+            transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 },
+          }}
         >
-          <div onClick={() => toggleTab(1)}>
-            <i className='uil uil-web-grid services__icon'></i>
-            <h3 className='services__title'>
-              ServCenter
-              <br />
-              service control
-            </h3>
+          <div className='services__card-secondary-inner'>
+            <div className='services__mini-copy' onClick={() => toggleTab(1)}>
+              <div className='services__mini-top'>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  ServCenter
+                  <br />
+                  service control
+                </h3>
+              </div>
+              <p className='services__mini-description'>
+                Service management system for customers, employees, work orders,
+                and cash control.
+              </p>
+              <span className='services__button' onClick={() => toggleTab(1)}>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </div>
+            <img
+              src={work1}
+              alt='ServCenter preview'
+              className='services__secondary-thumb'
+            />
           </div>
-          <span className='services__button' onClick={() => toggleTab(1)}>
-            View more
-            <i className='uil uil-arrow-right services__button-icon'></i>
-          </span>
           <div
             className={
               toggleState === 1
@@ -245,11 +249,11 @@ const Services = () => {
               ></i>
               <h3 className='services__modal-title'>ServCenter</h3>
               <p className='services__modal-description'>
-                Full management system for service companies. It has customer
-                registration, users, services, employees, control of work orders
-                and cash control. Developed with Django, Python, JavaScript and
-                Bootstrap technologies, this system offers an efficient solution
-                for managing the processes of a company.
+                Full management system for service companies, covering customer
+                registration, users, services, employees, work orders, and
+                cash control. I built it with Django, Python, JavaScript, and
+                Bootstrap to streamline day-to-day operations and reduce manual
+                work.
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
@@ -258,8 +262,8 @@ const Services = () => {
                     <a
                       href='https://servcenter-fullstack-django.onrender.com'
                       target='_blank'
+                      rel='noreferrer'
                       className='services__modal-link'
-                      rel="noreferrer"
                     >
                       Website (username and password 'teste'
                     </a>
@@ -272,8 +276,8 @@ const Services = () => {
                     <a
                       href='https://github.com/thiagoc-machado/ServCenter-Fullstack-Django'
                       target='_blank'
+                      rel='noreferrer'
                       className='services__modal-link'
-                      rel="noreferrer"
                     >
                       Github project
                     </a>
@@ -283,22 +287,39 @@ const Services = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className='services__content services__card2'
-        initial={{opacity: 0, y: -5 }}
-        whileInView={{ opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        <motion.div
+          className='services__content services__card-secondary services__card2'
+          initial={{ opacity: 0, y: -5 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 },
+          }}
         >
-          <div onClick={() => toggleTab(2)}>
-            <i className='uil uil-web-grid services__icon'></i>
-            <h3 className='services__title'>
-              Triac Soluções
-              <br />
-              Landing Page
-            </h3>
+          <div className='services__card-secondary-inner'>
+            <div className='services__mini-copy' onClick={() => toggleTab(2)}>
+              <div className='services__mini-top'>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  Triac Soluções
+                  <br />
+                  Landing Page
+                </h3>
+              </div>
+              <p className='services__mini-description'>
+                Clean, responsive landing page focused on clarity and conversion.
+              </p>
+              <span onClick={() => toggleTab(2)} className='services__button'>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </div>
+            <img
+              src={work2}
+              alt='Triac preview'
+              className='services__secondary-thumb'
+            />
           </div>
-          <span onClick={() => toggleTab(2)} className='services__button'>
-            View more
-            <i className='uil uil-arrow-right services__button-icon'></i>
-          </span>
           <div
             className={
               toggleState === 2
@@ -313,11 +334,10 @@ const Services = () => {
               ></i>
               <h3 className='services__modal-title'>Triac Soluções</h3>
               <p className='services__modal-description'>
-                The website of the appliance maintenance company was developed
-                with the combination of HTML, CSS and JavaScript to ensure an
-                optimized and attractive user experience. The website structure
-                was carefully planned to be intuitive and easy to navigate, with
-                a responsive menu that fits perfectly to any screen size.
+                Landing page for an appliance maintenance company, built with
+                HTML, CSS, and JavaScript. The focus was on clear messaging,
+                simple navigation, and a responsive layout that works well on
+                every screen size.
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
@@ -325,6 +345,7 @@ const Services = () => {
                   <a
                     href='https://triac.info/'
                     target='_blank'
+                    rel='noreferrer'
                     className='services__modal-link'
                   >
                     Website
@@ -336,6 +357,7 @@ const Services = () => {
                     <a
                       href='https://github.com/thiagoc-machado/triac-web'
                       target='_blank'
+                      rel='noreferrer'
                       className='services__modal-link'
                     >
                       Website
@@ -346,22 +368,41 @@ const Services = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className='services__content services__card3'
-        initial={{opacity: 0, y: -5, x: 5 }}
-        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        <motion.div
+          className='services__content services__card-secondary services__card3'
+          initial={{ opacity: 0, y: -5, x: 5 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            x: 0,
+            transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 },
+          }}
         >
-          <div onClick={() => toggleTab(3)}>
-            <i className='uil uil-web-grid services__icon'></i>
-            <h3 className='services__title'>
-              Cap España
-              <br />
-              Study plataform
-            </h3>
+          <div className='services__card-secondary-inner'>
+            <div className='services__mini-copy' onClick={() => toggleTab(3)}>
+              <div className='services__mini-top'>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  Cap España
+                  <br />
+                  Study platform
+                </h3>
+              </div>
+              <p className='services__mini-description'>
+                Practice tool for CAP exam prep with randomized questions and
+                local progress tracking.
+              </p>
+              <span onClick={() => toggleTab(3)} className='services__button'>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </div>
+            <img
+              src={work3}
+              alt='CAP platform preview'
+              className='services__secondary-thumb'
+            />
           </div>
-          <span onClick={() => toggleTab(3)} className='services__button'>
-            View more
-            <i className='uil uil-arrow-right services__button-icon'></i>
-          </span>
           <div
             className={
               toggleState === 3
@@ -376,12 +417,11 @@ const Services = () => {
               ></i>
               <h3 className='services__modal-title'>Visual Designer</h3>
               <p className='services__modal-description'>
-                This web application is designed for CAP exam preparation in
-                Spain. It scrapes questions from the Spanish Ministry of
-                Transport website, downloads them, and presents them randomly.
-                The app also tracks progress through javascript and saves it in
-                the user's browser. This web application is still in
-                development.
+                Web application for CAP exam preparation in Spain. It collects
+                questions from the Spanish Ministry of Transport, presents them
+                in a randomized study flow, and stores progress locally in the
+                browser. The project is still evolving, but the core learning
+                experience is already in place.
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
@@ -390,6 +430,7 @@ const Services = () => {
                     <a
                       href='https://cap-empc.onrender.com/'
                       target='_blank'
+                      rel='noreferrer'
                       className='services__modal-link'
                     >
                       Website
@@ -402,6 +443,7 @@ const Services = () => {
                     <a
                       href='https://cap-empc.onrender.com/'
                       target='_blank'
+                      rel='noreferrer'
                       className='services__modal-link'
                     >
                       Github project
@@ -412,22 +454,41 @@ const Services = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className='services__content services__card4'
-        initial={{opacity: 0, y: 5, x: -5 }}
-        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        <motion.div
+          className='services__content services__card-secondary services__card4'
+          initial={{ opacity: 0, y: 5, x: -5 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            x: 0,
+            transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 },
+          }}
         >
-          <div onClick={() => toggleTab(4)}>
-            <i className='uil uil-web-grid services__icon'></i>
-            <h3 className='services__title'>
-              MusicApp
-              <br />
-              Music player
-            </h3>
+          <div className='services__card-secondary-inner'>
+            <div className='services__mini-copy' onClick={() => toggleTab(4)}>
+              <div className='services__mini-top'>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  MusicApp
+                  <br />
+                  Music player
+                </h3>
+              </div>
+              <p className='services__mini-description'>
+                React player with Shazam API integration, search, playback and
+                lyrics.
+              </p>
+              <span onClick={() => toggleTab(4)} className='services__button'>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </div>
+            <img
+              src={work4}
+              alt='MusicApp preview'
+              className='services__secondary-thumb'
+            />
           </div>
-          <span onClick={() => toggleTab(4)} className='services__button'>
-            View more
-            <i className='uil uil-arrow-right services__button-icon'></i>
-          </span>
           <div
             className={
               toggleState === 4
@@ -442,11 +503,9 @@ const Services = () => {
               ></i>
               <h3 className='services__modal-title'>MusicApp</h3>
               <p className='services__modal-description'>
-                This project is a music player built using React, consuming data
-                from the Shazam API via Rapid API and styled with Tailwind CSS.
-                It includes features such as music search, playback, lyrics and
-                artist display and the added functionality of identifying the
-                user's location to provide local music recommendations
+                React music player built around the Shazam API via RapidAPI and
+                styled with Tailwind CSS. It includes search, playback, lyrics,
+                artist details, and location-aware recommendations.
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
@@ -455,6 +514,7 @@ const Services = () => {
                     <a
                       href='https://musicapp-thiago.netlify.app/'
                       target='_blank'
+                      rel='noreferrer'
                       className='services__modal-link'
                     >
                       Website
@@ -467,6 +527,7 @@ const Services = () => {
                     <a
                       href='https://github.com/thiagoc-machado/musicaap'
                       target='_blank'
+                      rel='noreferrer'
                       className='services__modal-link'
                     >
                       Github projet
@@ -477,22 +538,41 @@ const Services = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className='services__content services__card5'
-        initial={{opacity: 0, y: 5, x: 0 }}
-        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        <motion.div
+          className='services__content services__card-secondary services__card5'
+          initial={{ opacity: 0, y: 5, x: 0 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            x: 0,
+            transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 },
+          }}
         >
-          <div onClick={() => toggleTab(5)}>
-            <i className='uil uil-web-grid services__icon'></i>
-            <h3 className='services__title'>
-              E-wok
-              <br />
-              restaurant orders
-            </h3>
+          <div className='services__card-secondary-inner'>
+            <div className='services__mini-copy' onClick={() => toggleTab(5)}>
+              <div className='services__mini-top'>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  E-wok
+                  <br />
+                  Restaurant orders
+                </h3>
+              </div>
+              <p className='services__mini-description'>
+                Flask ordering flow for a restaurant with kitchen screen and order
+                tracking.
+              </p>
+              <span onClick={() => toggleTab(5)} className='services__button'>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </div>
+            <img
+              src={work5}
+              alt='E-wok preview'
+              className='services__secondary-thumb'
+            />
           </div>
-          <span onClick={() => toggleTab(5)} className='services__button'>
-            View more
-            <i className='uil uil-arrow-right services__button-icon'></i>
-          </span>
           <div
             className={
               toggleState === 5
@@ -507,13 +587,10 @@ const Services = () => {
               ></i>
               <h3 className='services__modal-title'>E-Wok sistems</h3>
               <p className='services__modal-description'>
-                This web application was developed with Python and the Flask
-                framework to facilitate the ordering process of a Chinese
-                restaurant. We used HTML, CSS and JavaScript for the frontend
-                and stored the order data in a SQLite database. We display the
-                list of orders for the preparation of dishes at the restaurant
-                endpoint and offer a discount system for recurring orders and an
-                option to filter by customer name.
+                Web app built with Python and Flask to simplify the ordering
+                process for a Chinese restaurant. It includes a customer flow,
+                a kitchen screen, SQLite persistence, recurring-order discounts,
+                and filtering by customer name.
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>
@@ -559,22 +636,41 @@ const Services = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className='services__content services__card6'
-        initial={{opacity: 0, y: 5, x: 5 }}
-        whileInView={{ opacity: 1, y: 0, x: 0, transition: { type: 'spring', stiffness: 100,  duration: 0.5, delay: 0.1 } }}
+        <motion.div
+          className='services__content services__card-secondary services__card6'
+          initial={{ opacity: 0, y: 5, x: 5 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            x: 0,
+            transition: { type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 },
+          }}
         >
-          <div onClick={() => toggleTab(6)}>
-            <i className='uil uil-web-grid services__icon'></i>
-            <h3 className='services__title'>
-              React
-              <br />
-              Dashboard
-            </h3>
+          <div className='services__card-secondary-inner'>
+            <div className='services__mini-copy' onClick={() => toggleTab(6)}>
+              <div className='services__mini-top'>
+                <i className='uil uil-web-grid services__icon'></i>
+                <h3 className='services__title'>
+                  React
+                  <br />
+                  Dashboard
+                </h3>
+              </div>
+              <p className='services__mini-description'>
+                Dashboard connected to Google Sheets for simple, spreadsheet-driven
+                updates.
+              </p>
+              <span onClick={() => toggleTab(6)} className='services__button'>
+                View more
+                <i className='uil uil-arrow-right services__button-icon'></i>
+              </span>
+            </div>
+            <img
+              src={work6}
+              alt='Dashboard preview'
+              className='services__secondary-thumb'
+            />
           </div>
-          <span onClick={() => toggleTab(6)} className='services__button'>
-            View more
-            <i className='uil uil-arrow-right services__button-icon'></i>
-          </span>
           <div
             className={
               toggleState === 6
@@ -589,9 +685,9 @@ const Services = () => {
               ></i>
               <h3 className='services__modal-title'>Dashboard</h3>
               <p className='services__modal-description'>
-                React dashboard with seamless integration to google sheets. You
-                can easily make changes to your data directly from the sheet,
-                making it easier and faster to update your dashboard.
+                React dashboard integrated with Google Sheets, letting data
+                updates happen directly from the spreadsheet while keeping the
+                dashboard in sync.
               </p>
               <ul className='services__modal-services grid'>
                 <li className='services__modal-service'>

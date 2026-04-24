@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Datas = () => {
     return (
         <div className="skills__content">
-            <h3 className="skills__title">Data</h3>
+            <h3 className="skills__title">Data / ETL</h3>
             <div className="skills__box">
                 <div className="skills__group">
                     <motion.div
@@ -43,7 +43,7 @@ const Datas = () => {
                     >
                         <i className="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">Numpy</h3>
+                            <h3 className="skills__name">NumPy</h3>
                             {/* <span className='skills__level'>9</span> */}
                         </div>
                     </motion.div>
@@ -106,7 +106,7 @@ const Datas = () => {
                     >
                         <i className="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">BeautfulSoup</h3>
+                            <h3 className="skills__name">BeautifulSoup</h3>
                             {/* <span className='skills__level'>5</span> */}
                         </div>
                     </motion.div>
@@ -128,6 +128,44 @@ const Datas = () => {
                         <div>
                             <h3 className="skills__name">Matplotlib</h3>
                             {/* <span className='skills__level'>5</span> */}
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        className="skills__data"
+                        initial={{ opacity: 0, y: -5 }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                type: "spring",
+                                stiffness: 100,
+                                duration: 0.5,
+                                delay: 0.8,
+                            },
+                        }}
+                    >
+                        <i className="uil uil-check"></i>
+                        <div>
+                            <h3 className="skills__name">Airflow</h3>
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        className="skills__data"
+                        initial={{ opacity: 0, y: -5 }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                type: "spring",
+                                stiffness: 100,
+                                duration: 0.5,
+                                delay: 0.9,
+                            },
+                        }}
+                    >
+                        <i className="uil uil-check"></i>
+                        <div>
+                            <h3 className="skills__name">Martin</h3>
                         </div>
                     </motion.div>
                 </div>

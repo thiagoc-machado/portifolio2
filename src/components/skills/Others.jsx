@@ -23,8 +23,7 @@ const Others = () => {
                     >
                         <i className="uil uil-check"></i>
                         <div>
-                            <h3 className="skills__name">Google / microsoft oauth</h3>
-                            {/* <span className='skills__level'>6</span> */}
+                            <h3 className="skills__name">Google / Microsoft OAuth</h3>
                         </div>
                     </motion.div>
                     <motion.div
@@ -44,7 +43,6 @@ const Others = () => {
                         <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Python Scripts</h3>
-                            {/* <span className='skills__level'>9</span> */}
                         </div>
                     </motion.div>
                     <motion.div
@@ -64,7 +62,6 @@ const Others = () => {
                         <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Postman / Insomnia</h3>
-                            {/* <span className='skills__level'>8</span> */}
                         </div>
                     </motion.div>
                 </div>
@@ -87,7 +84,6 @@ const Others = () => {
                         <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">RESTful APIs</h3>
-                            {/* <span className='skills__level'>7</span> */}
                         </div>
                     </motion.div>
                     <motion.div
@@ -107,7 +103,6 @@ const Others = () => {
                         <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Certbot</h3>
-                            {/* <span className='skills__level'>5</span> */}
                         </div>
                     </motion.div>
                     <motion.div
@@ -127,7 +122,6 @@ const Others = () => {
                         <i className="uil uil-check"></i>
                         <div>
                             <h3 className="skills__name">Bash Scripting</h3>
-                            {/* <span className='skills__level'>5</span> */}
                         </div>
                     </motion.div>
                 </div>
