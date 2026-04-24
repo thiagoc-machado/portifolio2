@@ -6,10 +6,7 @@ let introductionElement,
     restartButton,
     gameoverElement,
     actionButton,
-    scoreElement,
-    listElement,
-    formElement,
-    gameoverScoreElement;
+    scoreElement;
 let listenersBound = false;
 let listItems = [];
 
@@ -52,10 +49,6 @@ function startGame(canvas) {
     scoreElement = document.getElementById("score") ?? null;
     actionButton = document.getElementById("action") ?? null;
     gameoverElement = document.getElementById("gameover") ?? null;
-    listElement = document.getElementById("hiscore") ?? null;
-    formElement = document.getElementById("savename") ?? null;
-    gameoverScoreElement = document.getElementById("gameoverScore") ?? null;
-
     if (introductionElement) introductionElement.style.opacity = 1;
     if (savePlacarElement) savePlacarElement.style.display = "none";
     if (perfectElement) perfectElement.style.opacity = 0;
@@ -180,7 +173,7 @@ function drawPlatforms() {
         );
 
         // Draw perfect area only if hero did not yet reach the platform
-        if (sticks.last().x < x) {
+        if (last(sticks).x < x) {
             ctx.fillStyle = "yellow";
             ctx.fillRect(
                 x + w / 2 - perfectAreaSize / 2,
@@ -258,9 +251,7 @@ function drawRoundedRect(x, y, width, height, radius) {
 function getHillY(windowX, baseHeight, amplitude, stretch) {
     const sineBaseY = window.innerHeight - baseHeight;
     return (
-        Math.sinus(
-            (sceneOffset * backgroundSpeedMultiplier + windowX) * stretch
-        ) *
+        sinus((sceneOffset * backgroundSpeedMultiplier + windowX) * stretch) *
             amplitude +
         sineBaseY
     );
@@ -268,7 +259,7 @@ function getHillY(windowX, baseHeight, amplitude, stretch) {
 
 function getTreeY(x, baseHeight, amplitude) {
     const sineBaseY = window.innerHeight - baseHeight;
-    return Math.sinus(x) * amplitude + sineBaseY;
+    return sinus(x) * amplitude + sineBaseY;
 }
 
 function drawSticks() {
@@ -330,15 +321,14 @@ function generatePlatform() {
     platforms.push({ x, w });
 }
 
-// Extend the base functionality of JavaScript
-Array.prototype.last = function () {
-    return this[this.length - 1];
-};
+function last(array) {
+    return array[array.length - 1];
+}
 
 // A sinus function that acceps degrees instead of radians
-Math.sinus = function (degree) {
+function sinus(degree) {
     return Math.sin((degree / 180) * Math.PI);
-};
+}
 
 // Game data
 let phase = "waiting"; // waiting | stretching | turning | walking | transitioning | falling
@@ -354,18 +344,16 @@ let trees = [];
 
 let namel = "";
 let valuel = "";
-let savename = "";
-let action = "";
 
 let score = 0;
 
 // Configuration
-//const platformHeight = 200;
 const canvasWidth = 375;
 const canvasHeight = 1100;
 const heroDistanceFromEdge = 10; // While waiting
 const paddingX = 100; // The waiting position of the hero in from the original canvas size
 const perfectAreaSize = 10;
+let platformHeight;
 
 if (
     navigator.userAgent.match(/Android/i) ||
@@ -376,14 +364,14 @@ if (
     navigator.userAgent.match(/Windows Phone/i)
 ) {
     if (window.innerWidth > window.innerHeight) {
-        var platformHeight = 600;
+        platformHeight = 600;
         // console.log("Mobile mode deitado");
     } else {
-        var platformHeight = 0;
+        platformHeight = 0;
         // console.log("Mobile mode de pé");
     }
 } else {
-    var platformHeight = 400;
+    platformHeight = 400;
 }
 
 // console.log("Width = " + window.innerWidth);
@@ -457,12 +445,9 @@ function initOnce() {
         });
     }
 
-    const gameoverScoreElement = document.getElementById("gameoverScore");
-
-    var hallElement = {};
-
     // Hall of fame block
 
+    const gameoverScoreElement = document.getElementById("gameoverScore");
     const listElement = document.getElementById("hiscore");
     const formElement = document.getElementById("savename");
 
@@ -476,7 +461,6 @@ function initOnce() {
             console.error("Elemento com ID 'hiscore' não encontrado!");
         }
         for (var i = 0; i < json.record.length; i++) {
-            var item = document.createElement("li");
             namel = json.record[i].name;
             valuel = json.record[i].value;
             addItem(namel, valuel);
@@ -514,10 +498,9 @@ function initOnce() {
 
     function handleFormSubmit(event) {
         event.preventDefault();
-        const namesave = document.getElementById("nameSave");
         const name = formElement.elements["nameSave"].value;
         const value = score;
-        if (name != "") {
+        if (name !== "") {
             addItem(name, value);
             savePlacarElement.style.display = "none";
             var listaJSON = JSON.stringify(listItems);
@@ -525,7 +508,7 @@ function initOnce() {
             let req = new XMLHttpRequest();
 
             req.onreadystatechange = () => {
-                if (req.readyState == XMLHttpRequest.DONE) {
+                if (req.readyState === XMLHttpRequest.DONE) {
                     // console.log(req.responseText);
                 }
             };
@@ -579,9 +562,9 @@ function initOnce() {
         });
     }
     window.addEventListener("mouseup", function (event) {
-        if (phase == "stretching") {
-            phase = "turning";
-        }
+    if (phase === "stretching") {
+        phase = "turning";
+    }
     });
 
     window.addEventListener("resize", function () {
@@ -607,16 +590,16 @@ function initOnce() {
             case "waiting":
                 return; // Stop the loop
             case "stretching": {
-                sticks.last().length +=
+                last(sticks).length +=
                     (timestamp - lastTimestamp) / stretchingSpeed;
                 break;
             }
             case "turning": {
-                sticks.last().rotation +=
+                last(sticks).rotation +=
                     (timestamp - lastTimestamp) / turningSpeed;
 
-                if (sticks.last().rotation > 90) {
-                    sticks.last().rotation = 90;
+                if (last(sticks).rotation > 90) {
+                    last(sticks).rotation = 90;
 
                     const [nextPlatform, perfectHit] =
                         thePlatformTheStickHits();
@@ -658,7 +641,7 @@ function initOnce() {
                 } else {
                     // If hero won't reach another platform then limit it's position at the end of the pole
                     const maxHeroX =
-                        sticks.last().x + sticks.last().length + heroWidth;
+                        last(sticks).x + last(sticks).length + heroWidth;
                     if (heroX > maxHeroX) {
                         heroX = maxHeroX;
                         phase = "falling";
@@ -682,8 +665,8 @@ function initOnce() {
                 break;
             }
             case "falling": {
-                if (sticks.last().rotation < 180)
-                    sticks.last().rotation +=
+                if (last(sticks).rotation < 180)
+                    last(sticks).rotation +=
                         (timestamp - lastTimestamp) / turningSpeed;
 
                 heroY += (timestamp - lastTimestamp) / fallingSpeed;
@@ -714,9 +697,9 @@ function initOnce() {
 
     // Returns the platform the stick hit (if it didn't hit any stick then return undefined)
     function thePlatformTheStickHits() {
-        if (sticks.last().rotation != 90)
-            throw Error(`Stick is ${sticks.last().rotation}°`);
-        const stickFarX = sticks.last().x + sticks.last().length;
+        if (last(sticks).rotation !== 90)
+            throw Error(`Stick is ${last(sticks).rotation}°`);
+        const stickFarX = last(sticks).x + last(sticks).length;
 
         const platformTheStickHits = platforms.find(
             (platform) =>

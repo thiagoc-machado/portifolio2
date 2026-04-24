@@ -30,7 +30,7 @@ class GameComponent extends Component {
       <div>
         <div className="container-game">
           <canvas ref={this.canvasRef} id="game"></canvas>
-          <a id="titulo">Stick NINJA</a>
+          <h1 id="titulo">Stick NINJA</h1>
           <div id="introduction">
             Click the ACTION button to extend the stick, <br />
             click again to drop it.
@@ -41,21 +41,21 @@ class GameComponent extends Component {
             DOUBLE SCORE
           </div>
           <div className="placar" id="placar">
-            <a>SCORE</a>
+            <span>SCORE</span>
             <ul className="hiscore_h" id="hiscore_h">
               <li id="score">SCORE. </li>
             </ul>
-            <a>HALL OF FAME</a>
+            <span>HALL OF FAME</span>
             <ul className="hiscore" id="hiscore"></ul>
           </div>
           <div className="saveplacar" id="saveplacar">
             <form action="" id="savename">
-              <a id="enterName">
+              <span id="enterName">
                 Enter your name for the
                 <br />
                 Hall of fame
                 <br />
-              </a>
+              </span>
               <input
                 type="text"
                 placeholder="Name *"
