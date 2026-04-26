@@ -735,5 +735,4 @@ function initOnce() {
     }
 }
 
-window.addEventListener("load", initOnce);
 export { startGame, initOnce };
