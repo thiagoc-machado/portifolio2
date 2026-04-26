@@ -53,6 +53,9 @@ const Data = () => {
                 <a href="#qualification" className="button button--ghost">
                     View experience
                 </a>
+                <a href="#ninja" className="button button--ghost">
+                    I challenge you to Stick Ninja
+                </a>
             </div>
 
             <motion.div

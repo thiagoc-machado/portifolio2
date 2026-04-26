@@ -27,7 +27,7 @@ class GameComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div id="ninja">
         <div className="container-game">
           <canvas ref={this.canvasRef} id="game"></canvas>
           <h1 id="titulo">Stick NINJA</h1>
