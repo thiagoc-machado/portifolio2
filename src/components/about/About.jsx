@@ -28,12 +28,12 @@ function About() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             I build production-focused web applications with a backend-first
-            mindset, mainly using Django, FastAPI, Vue.js, and React. My day to
-            day work combines API design, data modeling, async processing,
-            deployment, and observability, with Docker, Nginx, PostgreSQL, and
-            AWS behind the scenes.<br></br>
-            I enjoy working on systems that need to be reliable, maintainable,
-            and ready to scale as the product grows.<br></br>
+            mindset, mainly using Django, FastAPI, Vue.js, and React. My work
+            spans API design, data modeling, async processing, deployment, and
+            observability, with Docker, Nginx, PostgreSQL, and AWS behind the
+            scenes.<br></br>
+            I like working on systems that are reliable, maintainable, and
+            ready to scale as the product grows.<br></br>
             If you want to talk about Python, backend architecture, or
             full-stack delivery, I am always open to it.
           </motion.p>

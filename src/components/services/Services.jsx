@@ -41,8 +41,8 @@ const Services = () => {
         <section className="services section" id="services">
             <h2 className="section__title">Projects</h2>
             <span className="section__subtitle">
-                Selected work with the strongest production impact, led by
-                MagisMenu and live at magismenu.com / magismenu.es
+                Flagship work, led by MagisMenu and live at magismenu.com /
+                magismenu.es
             </span>
 
             <div className="services__container container grid">
@@ -68,10 +68,9 @@ const Services = () => {
                                 MagisMenu
                             </h3>
                             <p className="services__featured-description">
-                                Multi-tenant restaurant platform live at
-                                magismenu.com and magismenu.es, built to connect
-                                customer ordering, operations, kitchen
-                                workflows, and management in a single product.
+                                Multi-tenant restaurant platform for QR
+                                ordering, operations, and management, live in
+                                production at magismenu.com and magismenu.es.
                             </p>
                             <div className="services__featured-tags">
                                 <span>QR ordering</span>
@@ -126,7 +125,7 @@ const Services = () => {
                                 MagisMenu is the flagship product in my
                                 portfolio, live at magismenu.com and
                                 magismenu.es. It is a multi-tenant restaurant
-                                platform built to connect customers, waiters,
+                                platform that connects customers, waiters,
                                 kitchens, kiosks, and management in one system.
                                 The product supports QR ordering at the table,
                                 real-time order tracking, status screens,
@@ -135,8 +134,7 @@ const Services = () => {
                                 I helped shape the backend and frontend
                                 experience with Django, DRF, PostgreSQL,
                                 WebSockets, Redis, Docker, and Vue, and the
-                                system has been deployed on AWS for production
-                                use.
+                                system is deployed on AWS for production use.
                             </p>
                             <div className="services__carousel">
                                 <img
@@ -190,15 +188,15 @@ const Services = () => {
                                     <p className="services__modal-info">
                                         Customer-facing flow: catalog, cart,
                                         item customization, multi-language
-                                        support, and QR ordering per table.
+                                        support, and QR ordering by table.
                                     </p>
                                 </li>
                                 <li className="services__modal-service">
                                     <i className="uil uil-check-circle services__modal-icon"></i>
                                     <p className="services__modal-info">
-                                        Operations layer: waiter/tablet and
-                                        kiosk screens designed to keep order
-                                        flow fast and consistent.
+                                        Operations layer: waiter and kiosk
+                                        screens designed to keep order flow
+                                        fast and consistent.
                                     </p>
                                 </li>
                                 <li className="services__modal-service">

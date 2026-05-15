@@ -33,9 +33,9 @@ function App() {
       <main className="main">
         <Home />
         <About />
-        <Skills />
-        <Qualification />
         <Services />
+        <Qualification />
+        <Skills />
         <Contact />
         {/* <Tetris /> */}
         {/* <Game /> */}

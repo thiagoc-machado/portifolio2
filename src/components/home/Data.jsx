@@ -16,7 +16,7 @@ const Data = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
             >
-                Backend-focused FullStack Developer
+                Backend-focused Full-Stack Developer
             </motion.h3>
             <motion.p
                 className="home__description"
@@ -24,10 +24,10 @@ const Data = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
             >
-                I build production systems in Python, Django, FastAPI, Vue and
-                React, with a focus on reliability, maintainability and clear
-                delivery. My work is strongest where product, data and backend
-                architecture meet.
+                I build production systems with Python, Django, FastAPI, Vue.js,
+                and React. My focus is on reliable delivery, maintainable
+                architecture, and the part where product, data, and backend
+                systems meet.
             </motion.p>
             <div className="home__actions">
                 <a href="#contact" className="button button--flex">

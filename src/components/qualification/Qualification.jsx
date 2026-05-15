@@ -11,7 +11,7 @@ const Qualification = () => {
         <section className="qualification section" id="qualification">
             <h2 className="section__title">Qualifications</h2>
             <span className="section__subtitle">
-                Selected certifications and experience
+                Experience and selected certifications
             </span>
 
             <div className="qualification__container container">
@@ -77,23 +77,12 @@ const Qualification = () => {
                                     IBM Skills Network - 2025
                                 </span>
                                 <div>
-                                    <span className="qualification__title"></span>
                                     <ul>
                                         <li>
-                                            The IBM AI Engineering Professional
-                                            Certificate provides practical
-                                            training in building, fine-tuning,
-                                            and deploying deep learning models,
-                                            including LLMs. It covers supervised
-                                            and unsupervised learning with
-                                            Python, using Keras, PyTorch, and
-                                            TensorFlow. The program includes NLP
-                                            applications with frameworks like
-                                            Hugging Face and LangChain, and
-                                            explores models such as GPT, BERT,
-                                            and LLaMA. It concludes with a
-                                            hands-on project using LangChain and
-                                            RAG.
+                                            Practical training in deep
+                                            learning, LLMs, NLP, and RAG using
+                                            Python, Keras, PyTorch, TensorFlow,
+                                            Hugging Face, and LangChain.
                                         </li>
                                     </ul>
                                     <br></br>
@@ -134,13 +123,10 @@ const Qualification = () => {
                                     Red Hat<br></br>2025
                                 </span>
                                 <span className="qualification__subtitle">
-                                    Completed a 3-course specialization focused
-                                    on developing, deploying, scaling, and
+                                    3-course specialization focused on
+                                    developing, deploying, scaling, and
                                     troubleshooting containerized applications
-                                    using Kubernetes and Red Hat OpenShift. The
-                                    program included practical, hands-on
-                                    projects and emphasized real-world
-                                    application of cloud-native technologies.
+                                    with Kubernetes and Red Hat OpenShift.
                                 </span>
                                 <span className="qualification__subtitle">
                                     <a
@@ -181,7 +167,7 @@ const Qualification = () => {
                             >
                                 <h3 className="qualification__title">
                                     Advanced Django: Mastering Django and Django
-                                    Rest Framework Specialization
+                                    REST Framework Specialization
                                 </h3>
                                 <span className="qualification__subtitle">
                                     Codio - 2023
@@ -194,7 +180,7 @@ const Qualification = () => {
                                         </li>
                                         <li>Writing tests</li>
                                         <li>Integrate with ReactJS</li>
-                                        <li>Django Rest Framework</li>
+                                        <li>Django REST Framework</li>
                                         <li>Authenticate users with Google</li>
                                         <li>Caching and optimizing database</li>
                                     </ul>
@@ -228,7 +214,7 @@ const Qualification = () => {
                                 }}
                             >
                                 <h3 className="qualification__title">
-                                    Django for everybody
+                                    Django for Everybody
                                 </h3>
                                 <span className="qualification__subtitle">
                                     University of Michigan<br></br>2023
