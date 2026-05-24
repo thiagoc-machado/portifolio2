@@ -7,7 +7,7 @@ const Contact = () => {
   const [status, setStatus] = useState("");
   const form = useRef();
   const contactEndpoint =
-    process.env.REACT_APP_CONTACT_ENDPOINT ||
+    import.meta.env.VITE_CONTACT_ENDPOINT ||
     "/.netlify/functions/send-contact";
 
   const sendEmail = async (e) => {
@@ -111,8 +111,11 @@ const Contact = () => {
 
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
-              <label className="contact__form-tag">Name</label>
+              <label className="contact__form-tag" htmlFor="contact-name">
+                Name
+              </label>
               <input
+                id="contact-name"
                 type="text"
                 name="name"
                 className="contact__form-input"
@@ -121,8 +124,11 @@ const Contact = () => {
               />
             </div>
             <div className="contact__form-div">
-              <label className="contact__form-tag">Mail</label>
+              <label className="contact__form-tag" htmlFor="contact-email">
+                Mail
+              </label>
               <input
+                id="contact-email"
                 type="email"
                 name="email"
                 className="contact__form-input"
@@ -131,8 +137,11 @@ const Contact = () => {
               />
             </div>
             <div className="contact__form-div contact__form-area">
-              <label className="contact__form-tag">Message</label>
+              <label className="contact__form-tag" htmlFor="contact-message">
+                Message
+              </label>
               <textarea
+                id="contact-message"
                 name="message"
                 className="contact__form-input"
                 cols="30"
