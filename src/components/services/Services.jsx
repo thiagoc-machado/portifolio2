@@ -351,15 +351,15 @@ const Services = () => {
                 </motion.article>
                 <div className="projects__grid">
                     {projects.map((item) => <ProjectCard key={item.id} project={item} onOpen={openProject} />)}
+                    <button className="projects__others-card" onClick={() => setShowOtherProjects(true)}>
+                        <span className="projects__others-icon"><i className="uil uil-apps" /></span>
+                        <span className="projects__others-copy">
+                            <strong>Other highlighted projects</strong>
+                            <span>Explore more applications, experiments and tools.</span>
+                        </span>
+                        <i className="uil uil-arrow-right projects__others-arrow" />
+                    </button>
                 </div>
-                <button className="projects__others-card" onClick={() => setShowOtherProjects(true)}>
-                    <span className="projects__others-icon"><i className="uil uil-apps" /></span>
-                    <span className="projects__others-copy">
-                        <strong>Other highlighted projects</strong>
-                        <span>Explore more applications, experiments and tools.</span>
-                    </span>
-                    <i className="uil uil-arrow-right projects__others-arrow" />
-                </button>
             </div>
             {project && <ProjectModal project={project} magis={project.id === "magismenu"} onClose={() => setActiveProject(null)} />}
             {showOtherProjects && <OtherProjectsModal onClose={() => setShowOtherProjects(false)} />}

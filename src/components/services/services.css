@@ -771,7 +771,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 1.2rem;
+  min-height: 225px;
   padding: 1.15rem 1.3rem;
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 1.15rem;
@@ -862,5 +862,6 @@
   .projects__modal-grid { grid-template-columns: 1fr; }
   .projects__others-grid { grid-template-columns: 1fr; }
   .projects__others-card { align-items: flex-start; }
+  .projects__others-card { min-height: 135px; }
   .projects__others-arrow { margin-left: auto; align-self: center; }
 }
