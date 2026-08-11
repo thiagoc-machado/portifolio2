@@ -151,6 +151,17 @@ const Contact = () => {
               ></textarea>
             </div>
 
+            <div className="contact__form-trap" aria-hidden="true">
+              <label htmlFor="contact-company">Company</label>
+              <input
+                id="contact-company"
+                type="text"
+                name="company"
+                tabIndex="-1"
+                autoComplete="off"
+              />
+            </div>
+
             <button className="button button--flex" disabled={isLoading}>
               {isLoading ? (
                 <>

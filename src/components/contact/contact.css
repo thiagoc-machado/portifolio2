@@ -106,6 +106,13 @@
 .contact__form-area textarea {
   resize: none;
 }
+.contact__form-trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 .spinner {
   display: inline-block;
   width: 14px;
