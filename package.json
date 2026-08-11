@@ -46,6 +46,7 @@
     "vitest": "^3.2.6"
   },
   "overrides": {
-    "@babel/core": "7.29.6"
+    "@babel/core": "7.29.6",
+    "postcss": "8.5.23"
   }
 }
