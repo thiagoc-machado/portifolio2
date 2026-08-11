@@ -144,7 +144,7 @@ export default function Game() {
 
     function addItem(name, value) {
       const newItem = document.createElement("li");
-      newItem.innerHTML = `${name}: ${value}`;
+      newItem.textContent = `${name}: ${value}`;
       let insertIndex = 0;
       while (
         insertIndex < listItems.length &&
@@ -165,25 +165,15 @@ export default function Game() {
       const namesave = document.getElementById("nameSave");
       const name = formElement.elements["nameSave"].value;
       const value = score;
-      if (name != "") {
+      const website = formElement.elements["website"].value;
+      if (name.trim() !== "" && website === "") {
         addItem(name, value);
         savePlacarElement.style.display = "none";
-        var listaJSON = JSON.stringify(listItems);
-        // console.log(listaJSON);
-        let req = new XMLHttpRequest();
-
-        req.onreadystatechange = () => {
-          if (req.readyState == XMLHttpRequest.DONE) {
-            // console.log(req.responseText);
-          }
-        };
-        req.open(
-          "PUT",
-          "https://api.jsonbin.io/v3/b/639b92eb15ab31599e1d5c43",
-          true
-        );
-        req.setRequestHeader("Content-Type", "application/json");
-        req.send(listaJSON);
+        fetch("/.netlify/functions/save-score", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: name.trim(), value, website }),
+        }).catch((error) => console.error("Erro ao salvar pontuação:", error));
       }
     }
 
@@ -700,11 +690,16 @@ export default function Game() {
           </a>
           <input
             type="text"
+            name="nameSave"
             placeholder="Name *"
             className="nameSave"
             id="nameSave"
             maxLength="10"
           />
+          <div className="score-form-trap" aria-hidden="true">
+            <label htmlFor="website">Website</label>
+            <input id="website" name="website" type="text" tabIndex="-1" autoComplete="off" />
+          </div>
           <button type="submit" id="saveBtn" value="Save" className="saveBtn">
             {" "}
             Save{" "}

@@ -480,7 +480,7 @@ function initOnce() {
 
     function addItem(name, value) {
         const newItem = document.createElement("li");
-        newItem.innerHTML = `${name}: ${value}`;
+        newItem.textContent = `${name}: ${value}`;
         let insertIndex = 0;
         while (
             insertIndex < listItems.length &&
@@ -498,27 +498,17 @@ function initOnce() {
 
     function handleFormSubmit(event) {
         event.preventDefault();
-        const name = formElement.elements["nameSave"].value;
+        const name = formElement.elements["nameSave"].value.trim();
         const value = score;
-        if (name !== "") {
+        const website = formElement.elements["website"].value;
+        if (name !== "" && website === "") {
             addItem(name, value);
             savePlacarElement.style.display = "none";
-            var listaJSON = JSON.stringify(listItems);
-            // console.log(listaJSON);
-            let req = new XMLHttpRequest();
-
-            req.onreadystatechange = () => {
-                if (req.readyState === XMLHttpRequest.DONE) {
-                    // console.log(req.responseText);
-                }
-            };
-            req.open(
-                "PUT",
-                "https://api.jsonbin.io/v3/b/639b92eb15ab31599e1d5c43",
-                true
-            );
-            req.setRequestHeader("Content-Type", "application/json");
-            req.send(listaJSON);
+            fetch("/.netlify/functions/save-score", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, value, website }),
+            }).catch((error) => console.error("Erro ao salvar pontuação:", error));
         }
     }
 

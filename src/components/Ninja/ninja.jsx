@@ -58,11 +58,16 @@ class GameComponent extends Component {
               </span>
               <input
                 type="text"
+                name="nameSave"
                 placeholder="Name *"
                 className="nameSave"
                 id="nameSave"
                 maxLength="10"
               />
+              <div className="score-form-trap" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input id="website" name="website" type="text" tabIndex="-1" autoComplete="off" />
+              </div>
               <button
                 type="submit"
                 id="saveBtn"

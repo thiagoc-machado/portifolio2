@@ -105,6 +105,13 @@
   list-style: none;
   align-items: left;
 }
+.score-form-trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 #saveplacar {
   display: flex;
   flex-direction: row;
