@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { handler, scoreSpam } from "./send-contact.js";
+import { handler, scoreSpam } from "../../../netlify/functions/send-contact.js";
 
 const basePayload = { name: "Thiago Machado", email: "person@example.com", message: "Hello, I would like to discuss a project." };
 const event = (body, ip = "203.0.113.10") => ({ httpMethod: "POST", headers: { "x-nf-client-connection-ip": ip, "user-agent": "test-agent" }, body: JSON.stringify(body) });
@@ -32,7 +32,6 @@ describe("send-contact function", () => {
     for (let index = 0; index < 5; index += 1) await handler(event(basePayload, ip));
     const response = await handler(event(basePayload, ip));
     const successResponse = await handler(event(basePayload, "203.0.113.23"));
-
     expect(response.statusCode).toBe(200);
     expect(response.body).toBe(successResponse.body);
     expect(global.fetch).toHaveBeenCalledTimes(6);
