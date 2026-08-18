@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./about.css";
 import AboutImg from "../../assets/about.jpg";
-import CV from "../../assets/CV-EN.pdf";
+import CV from "../../assets/CV_EN.pdf";
 import CVES from "../../assets/CV_ES.pdf";
 import CVPT from "../../assets/CV_PT.pdf";
 import Info from "./Info";
