@@ -61,6 +61,73 @@
   margin-bottom: var(--mb-2-5);
   color: rgba(255, 255, 255, 0.74);
 }
+.cv-download {
+  position: relative;
+  display: inline-block;
+}
+.cv-download__trigger {
+  border: 0;
+  cursor: pointer;
+}
+.cv-download__chevron {
+  margin-left: 0.15rem;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+.cv-download__trigger[aria-expanded="true"] .cv-download__chevron {
+  transform: rotate(180deg);
+}
+.cv-download__menu {
+  position: absolute;
+  z-index: var(--z-tooltip);
+  top: calc(100% + 0.6rem);
+  left: 0;
+  min-width: 190px;
+  padding: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.85rem;
+  background: var(--container-color);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+}
+.cv-download__menu-label {
+  display: block;
+  padding: 0.35rem 0.6rem 0.45rem;
+  color: var(--text-color);
+  font-size: var(--tiny-font-size);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.cv-download__option {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.62rem 0.6rem;
+  border-radius: 0.55rem;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.cv-download__option:hover,
+.cv-download__option:focus-visible {
+  background: rgba(255, 255, 255, 0.09);
+  outline: none;
+}
+.cv-download__language {
+  display: grid;
+  width: 1.65rem;
+  height: 1.35rem;
+  place-items: center;
+  border-radius: 0.3rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--first-color);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+.cv-download__option i {
+  margin-left: auto;
+  color: var(--text-color);
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
@@ -98,6 +165,10 @@
   }
   .about__description {
     padding: 0;
+  }
+  .cv-download__menu {
+    right: 0;
+    left: auto;
   }
 }
 
