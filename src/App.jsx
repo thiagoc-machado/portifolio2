@@ -20,7 +20,7 @@ console.log(`
      ██║   ██║  ██║██║██║  ██║╚██████╔╝╚██████╔╝
      ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝
   
-  Hi developer 👀
+  Hi developer, 👀
   If you're reading this, you probably know what you're doing...
   But if not, call Me. 😎
   `);
