@@ -50,6 +50,7 @@
   },
   "overrides": {
     "@babel/core": "7.29.6",
-    "postcss": "8.5.23"
+    "postcss": "8.5.23",
+    "source-map-js": "1.2.2"
   }
 }
